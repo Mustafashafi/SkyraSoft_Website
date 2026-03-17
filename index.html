@@ -15,6 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --bg-dark: #02040a;
@@ -337,7 +338,7 @@
       z-index: 100;
       padding: 40px 20px;
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
-                  inset 0 1px 1px rgba(255, 255, 255, 0.05);
+        inset 0 1px 1px rgba(255, 255, 255, 0.05);
     }
 
     .stats-strip-container {
@@ -369,10 +370,10 @@
       top: 15%;
       height: 70%;
       width: 1px;
-      background: linear-gradient(to bottom, 
-                  transparent 0%, 
-                  rgba(59, 130, 246, 0.4) 50%, 
-                  transparent 100%);
+      background: linear-gradient(to bottom,
+          transparent 0%,
+          rgba(59, 130, 246, 0.4) 50%,
+          transparent 100%);
     }
 
     .stat-val {
@@ -390,7 +391,9 @@
     }
 
     @keyframes shine {
-      to { background-position: 200% center; }
+      to {
+        background-position: 200% center;
+      }
     }
 
     .stat-lbl {
@@ -409,17 +412,32 @@
       }
     }
 
-    .stat-item-premium:nth-child(1) { animation-delay: 0.2s; }
-    .stat-item-premium:nth-child(2) { animation-delay: 0.3s; }
-    .stat-item-premium:nth-child(3) { animation-delay: 0.4s; }
-    .stat-item-premium:nth-child(4) { animation-delay: 0.5s; }
-    .stat-item-premium:nth-child(5) { animation-delay: 0.6s; }
+    .stat-item-premium:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    .stat-item-premium:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    .stat-item-premium:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .stat-item-premium:nth-child(4) {
+      animation-delay: 0.5s;
+    }
+
+    .stat-item-premium:nth-child(5) {
+      animation-delay: 0.6s;
+    }
 
     @media (max-width: 1024px) {
       .stats-strip {
         margin-top: -60px;
         padding: 30px 15px;
       }
+
       .stat-val {
         font-size: 32px;
       }
@@ -431,14 +449,17 @@
         width: calc(100% - 40px);
         border-radius: 20px;
       }
+
       .stats-strip-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
       }
+
       .stat-item-premium:not(:last-child)::after {
         display: none;
       }
+
       .stat-item-premium:last-child {
         grid-column: span 2;
       }
@@ -447,8 +468,8 @@
     /* Innovation Hub Adjustments */
     .innovation-hub-section {
       padding: 120px 0;
-      background: linear-gradient(rgba(2, 4, 10, 0.88), rgba(2, 4, 10, 0.88)), 
-                  url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1600');
+      background: linear-gradient(rgba(2, 4, 10, 0.88), rgba(2, 4, 10, 0.88)),
+        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1600');
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
@@ -458,16 +479,17 @@
     /* CSS for section section:ProblemSolution */
     .problem-solution-section {
       padding: 120px 0;
-      background: linear-gradient(rgba(15, 20, 51, 0.9), rgba(15, 20, 51, 0.9)), 
-                  url('https://images.unsplash.com/photo-1542393545-10f5cde2c810?auto=format&fit=crop&q=80&w=1600');
+      background: linear-gradient(rgba(15, 20, 51, 0.9), rgba(15, 20, 51, 0.9)),
+        url('https://images.unsplash.com/photo-1542393545-10f5cde2c810?auto=format&fit=crop&q=80&w=1600');
       background-size: cover;
       background-position: center;
     }
+
     /* Innovation Hub (Story focus) */
     .innovation-hub-section {
       padding: 120px 0;
-      background: linear-gradient(rgba(2, 4, 10, 0.95), rgba(2, 4, 10, 0.95)), 
-                  url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1600');
+      background: linear-gradient(rgba(2, 4, 10, 0.95), rgba(2, 4, 10, 0.95)),
+        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1600');
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
@@ -576,7 +598,7 @@
       .bento-wrapper {
         grid-template-columns: 1fr;
       }
-      
+
       .bento-main-text {
         padding: 30px;
       }
@@ -586,15 +608,16 @@
       .bento-grid-metrics {
         grid-template-columns: 1fr;
       }
-      
+
       .metric-card.large {
         grid-column: span 1;
       }
-      
+
       .bento-main-text h2 {
         font-size: 32px;
       }
     }
+
     .comparison-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -691,8 +714,8 @@
     /* CSS for section section:Services */
     .services-section {
       padding: 120px 0;
-      background: linear-gradient(rgba(2, 4, 10, 0.92), rgba(2, 4, 10, 0.92)), 
-                  url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600');
+      background: linear-gradient(rgba(2, 4, 10, 0.92), rgba(2, 4, 10, 0.92)),
+        url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600');
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
@@ -787,8 +810,8 @@
     /* CSS for section section:WhyUs */
     .why-us-section {
       padding: 120px 0;
-      background: linear-gradient(rgba(2, 4, 10, 0.85), rgba(2, 4, 10, 0.85)), 
-                  url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600');
+      background: linear-gradient(rgba(2, 4, 10, 0.85), rgba(2, 4, 10, 0.85)),
+        url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600');
       background-size: cover;
       background-position: center;
     }
@@ -836,8 +859,8 @@
     /* CSS for section section:Process Redesigned */
     .process-section {
       padding: 120px 0;
-      background: linear-gradient(rgba(2, 4, 10, 0.9), rgba(2, 4, 10, 0.9)), 
-                  url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600');
+      background: linear-gradient(rgba(2, 4, 10, 0.9), rgba(2, 4, 10, 0.9)),
+        url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600');
       background-size: cover;
       background-position: center;
       position: relative;
@@ -848,7 +871,9 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 48px;
       margin-top: 60px;
-    }    .process-card {
+    }
+
+    .process-card {
       background: rgba(15, 23, 42, 0.6);
       border: 1px solid rgba(59, 130, 246, 0.4);
       border-radius: 24px;
@@ -859,8 +884,8 @@
       flex-direction: column;
       /* overflow: hidden removed to allow protruding badge */
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
-                  0 0 20px rgba(59, 130, 246, 0.1),
-                  inset 0 1px 1px rgba(255, 255, 255, 0.1);
+        0 0 20px rgba(59, 130, 246, 0.1),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
     }
 
     /* Arrow Connector */
@@ -884,7 +909,7 @@
         top: 50%;
         transform: translateY(-50%);
       }
-      
+
       .process-card:nth-child(3)::after {
         display: none;
       }
@@ -901,7 +926,8 @@
       height: 4px;
       background: linear-gradient(90deg, var(--primary), #8b5cf6, var(--primary));
       background-size: 200% auto;
-      opacity: 1; /* Highlighted always */
+      opacity: 1;
+      /* Highlighted always */
       transition: opacity 0.3s ease;
       border-radius: 20px 20px 0 0;
       animation: gradientFlow 3s linear infinite;
@@ -909,13 +935,16 @@
     }
 
     @keyframes gradientFlow {
-      to { background-position: 200% center; }
+      to {
+        background-position: 200% center;
+      }
     }
 
     .step-icon-box {
       width: 60px;
       height: 60px;
-      background: var(--primary); /* Highlighted always */
+      background: var(--primary);
+      /* Highlighted always */
       color: white;
       border-radius: 16px;
       display: flex;
@@ -974,11 +1003,25 @@
       height: 24px;
     }
 
-    .badge-color-1 { background: linear-gradient(135deg, #3b82f6, #1e40af); }
-    .badge-color-2 { background: linear-gradient(135deg, #8b5cf6, #5b21b6); }
-    .badge-color-3 { background: linear-gradient(135deg, #10b981, #065f46); }
-    .badge-color-4 { background: linear-gradient(135deg, #f59e0b, #92400e); }
-    .badge-color-5 { background: linear-gradient(135deg, #ef4444, #991b1b); }
+    .badge-color-1 {
+      background: linear-gradient(135deg, #3b82f6, #1e40af);
+    }
+
+    .badge-color-2 {
+      background: linear-gradient(135deg, #8b5cf6, #5b21b6);
+    }
+
+    .badge-color-3 {
+      background: linear-gradient(135deg, #10b981, #065f46);
+    }
+
+    .badge-color-4 {
+      background: linear-gradient(135deg, #f59e0b, #92400e);
+    }
+
+    .badge-color-5 {
+      background: linear-gradient(135deg, #ef4444, #991b1b);
+    }
 
 
 
@@ -993,12 +1036,12 @@
       .process-section {
         padding: 80px 0;
       }
-      
+
       .process-grid {
         grid-template-columns: 1fr;
         gap: 24px;
       }
-      
+
       .process-card {
         padding: 40px 28px;
       }
@@ -1133,8 +1176,8 @@
     /* CSS for section section:Portfolio */
     .portfolio-section {
       padding: 120px 0;
-      background: linear-gradient(rgba(2, 4, 10, 0.88), rgba(15, 23, 42, 0.88)), 
-                  url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1600');
+      background: linear-gradient(rgba(2, 4, 10, 0.88), rgba(15, 23, 42, 0.88)),
+        url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1600');
       background-attachment: fixed;
       background-size: cover;
       background-position: center;
@@ -1373,8 +1416,8 @@
     /* CSS for section section:Testimonials */
     .testimonials-section {
       padding: 120px 0;
-      background: linear-gradient(rgba(15, 20, 51, 0.9), rgba(15, 20, 51, 0.9)), 
-                  url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1600');
+      background: linear-gradient(rgba(15, 20, 51, 0.9), rgba(15, 20, 51, 0.9)),
+        url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1600');
       background-size: cover;
       background-position: center;
     }
@@ -1409,7 +1452,7 @@
       gap: 16px;
     }
 
-    .client-info > div:last-child {
+    .client-info>div:last-child {
       text-align: left;
     }
 
@@ -1678,7 +1721,6 @@
         </div>
         <span class="logo-text">Skyra<span class="text-blue">Soft</span></span>
       </a>
-
       <nav class="desktop-nav">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
@@ -1687,7 +1729,6 @@
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
       </nav>
-
       <a href="quote.html" class="btn btn-primary header-btn">Get a Quote</a>
     </div>
   </header>
@@ -1756,8 +1797,11 @@
         <div class="bento-main-text">
           <div class="badge badge-blue">SKYRASOFT INNOVATION</div>
           <h2>Not Another Agency. A Growth Partner That <span class="text-highlight">Actually Gets It.</span></h2>
-          <p>We started SkyraSoft because we saw business owners dealing with disjointed teams and inconsistent quality. We replaced that chaos with a unified, high-performance team dedicated to localized growth in the UK and Saudi Arabia.</p>
-          <p>Our team of 10 specialists doesn't work in isolation—we work together with full context of your business goals.</p>
+          <p>We started SkyraSoft because we saw business owners dealing with disjointed teams and inconsistent quality.
+            We replaced that chaos with a unified, high-performance team dedicated to localized growth in the UK and
+            Saudi Arabia.</p>
+          <p>Our team of 10 specialists doesn't work in isolation—we work together with full context of your business
+            goals.</p>
           <div class="skill-tags">
             <span class="skill-tag">Asymmetric Strategy</span>
             <span class="skill-tag">Custom Engineering</span>
@@ -1776,7 +1820,7 @@
             <h3>Global Footprint</h3>
             <p>Serving the UK, KSA, and beyond with deep cultural and commercial understanding.</p>
           </div>
-          
+
           <div class="metric-card">
             <span>Velocity</span>
             <h3>2–4 Hrs</h3>
@@ -2100,10 +2144,16 @@
       <div class="process-grid">
         <div class="process-card">
           <div class="process-step-badge badge-color-1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
           </div>
           <div class="step-icon-box">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
           </div>
           <h3>Free Discovery Consultation</h3>
           <p>We start by understanding your business from every angle — your current digital situation, where your
@@ -2112,10 +2162,18 @@
 
         <div class="process-card">
           <div class="process-step-badge badge-color-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
           </div>
           <div class="step-icon-box">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
           </div>
           <h3>Research & Strategy</h3>
           <p>Before we propose anything, we do our homework. Market research, competitor analysis, audience profiling,
@@ -2124,10 +2182,24 @@
 
         <div class="process-card">
           <div class="process-step-badge badge-color-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
           </div>
           <div class="step-icon-box">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
           </div>
           <h3>Tailored Proposal</h3>
           <p>We put together a proposal that's specific to your business — what we'll do, in what order, with what
@@ -2136,10 +2208,18 @@
 
         <div class="process-card">
           <div class="process-step-badge badge-color-4">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
           </div>
           <div class="step-icon-box">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
           </div>
           <h3>Build, Create & Execute</h3>
           <p>Our team gets to work. You receive regular progress updates, have direct access to your project manager,
@@ -2148,17 +2228,25 @@
 
         <div class="process-card">
           <div class="process-step-badge badge-color-5">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
           </div>
           <div class="step-icon-box">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
           </div>
           <h3>Launch, Measure & Optimise</h3>
           <p>We launch, monitor performance closely, and report back with clear data. Then we identify what's working
             best and optimise accordingly.</p>
         </div>
       </div>
-      </div>
+    </div>
     </div>
   </section>
   <section class="portfolio-section" id="portfolio">
@@ -2175,7 +2263,8 @@
         <!-- Case Study 1 -->
         <div class="portfolio-card">
           <div class="portfolio-image">
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" alt="Shopify Store" class="project-img">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800"
+              alt="Shopify Store" class="project-img">
             <div class="portfolio-icon"><img src="images/57_263.svg" alt="Shopify"></div>
           </div>
           <div class="portfolio-content">
@@ -2189,7 +2278,8 @@
         <!-- Case Study 2 -->
         <div class="portfolio-card">
           <div class="portfolio-image">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" alt="Restaurant Interior" class="project-img">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800"
+              alt="Restaurant Interior" class="project-img">
             <div class="portfolio-icon"><img src="images/57_273.svg" alt="WordPress"></div>
           </div>
           <div class="portfolio-content">
@@ -2203,7 +2293,8 @@
         <!-- Case Study 3 -->
         <div class="portfolio-card">
           <div class="portfolio-image">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="SaaS Dashboard" class="project-img">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+              alt="SaaS Dashboard" class="project-img">
             <div class="portfolio-icon"><img src="images/57_283.svg" alt="Social"></div>
           </div>
           <div class="portfolio-content">
@@ -2297,7 +2388,8 @@
       <div class="founder-content">
         <div class="founder-image">
           <div class="image-placeholder">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" alt="Founder Tariq H.">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800"
+              alt="Founder Tariq H.">
           </div>
         </div>
         <div class="founder-text">
@@ -2334,7 +2426,8 @@
             store conversion rate tripled within 90 days."</p>
           <div class="client-info">
             <div class="client-avatar">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" alt="Sarah Jenkins">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150"
+                alt="Sarah Jenkins">
             </div>
             <div>
               <div class="client-name">Sarah Jenkins 🇬🇧</div>
@@ -2352,7 +2445,8 @@
             getting more organic enquiries than we could handle."</p>
           <div class="client-info">
             <div class="client-avatar">
-              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150" alt="Hassan Malik">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150"
+                alt="Hassan Malik">
             </div>
             <div>
               <div class="client-name">Hassan Malik 🇸🇦</div>
@@ -2370,7 +2464,8 @@
           </p>
           <div class="client-info">
             <div class="client-avatar">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150" alt="Mark Thompson">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150"
+                alt="Mark Thompson">
             </div>
             <div>
               <div class="client-name">Mark Thompson</div>
@@ -2396,7 +2491,8 @@
       <div class="grid insights-grid">
         <div class="insight-card">
           <div class="insight-image">
-            <img src="https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&q=80&w=800" alt="SEO Insights">
+            <img src="https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&q=80&w=800"
+              alt="SEO Insights">
           </div>
           <div class="insight-content">
             <div class="tag">SEO | 8 min read</div>
@@ -2409,7 +2505,8 @@
 
         <div class="insight-card">
           <div class="insight-image">
-            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=800" alt="Social Media Insights">
+            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=800"
+              alt="Social Media Insights">
           </div>
           <div class="insight-content">
             <div class="tag">Social Media | 6 min read</div>
@@ -2422,7 +2519,8 @@
 
         <div class="insight-card">
           <div class="insight-image">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800" alt="E-Commerce Insights">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800"
+              alt="E-Commerce Insights">
           </div>
           <div class="insight-content">
             <div class="tag">E-Commerce | 10 min read</div>
