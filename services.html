@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services | WordPress, Shopify, SEO, Marketing & More | SkyraSoft</title>
+  <meta name="description"
+    content="SkyraSoft offers 8 expert digital services under one roof — WordPress, Shopify, SEO, Social Media, Web Apps, ERP/CRM, Graphic Design & Video. Serving UK and Saudi Arabia.">
+  <meta name="keywords"
+    content="digital services UK, digital agency services Saudi Arabia, web design SEO social media one agency, all in one digital agency UK, full service web agency KSA, WordPress Shopify SEO marketing agency">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-dark: #02040a;
+      --bg-card: rgba(255, 255, 255, 0.05);
+      --bg-card-hover: rgba(255, 255, 255, 0.08);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #3b82f6;
+      --primary-glow: rgba(59, 130, 246, 0.5);
+      --accent-purple: #7c3aed;
+      --accent-indigo: #4f46e5;
+      --success: #10b981;
+      --border-color: rgba(255, 255, 255, 0.1);
+      --glass-glow: radial-gradient(circle at top left, rgba(255, 255, 255, 0.1), transparent 40%);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    p {
+      color: var(--text-muted);
+    }
+
+    a {
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      gap: 10px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: white;
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* Header */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(2, 4, 10, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      height: 85px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 24px;
+      color: white;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 15px rgba(79, 70, 229, 0.4);
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .desktop-nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    .desktop-nav a {
+      color: var(--text-muted);
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .desktop-nav a:hover, .desktop-nav a.active {
+      color: white;
+    }
+
+    @media (max-width: 991px) {
+      .desktop-nav { display: none; }
+    }
+
+    /* Simplified Hero Section */
+    .hero-section {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      position: relative;
+      background: linear-gradient(rgba(2, 4, 10, 0.8), rgba(2, 4, 10, 0.8)), 
+                  url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1920');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero-section h1 {
+      font-size: clamp(40px, 6vw, 72px);
+      margin-bottom: 24px;
+      line-height: 1.1;
+      color: white;
+      font-weight: 800;
+      background: linear-gradient(to bottom, #fff, #94a3b8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-section p {
+      font-size: clamp(18px, 1.8vw, 22px);
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* Advantage Section */
+    .advantage-section {
+      padding: 120px 0;
+      background: linear-gradient(rgba(2, 4, 10, 0.9), rgba(2, 4, 10, 0.9)), 
+                  url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    .advantage-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .advantage-visual {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+      border: 1px solid var(--border-color);
+    }
+
+    .advantage-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .advantage-visual:hover img {
+      transform: scale(1.05);
+    }
+
+    .advantage-content h2 {
+      font-size: 42px;
+      margin-bottom: 24px;
+      color: white;
+    }
+
+    .advantage-content p {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .advantage-content .highlight-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      padding: 30px;
+      border-radius: 20px;
+      margin-top: 40px;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Service Cards Section */
+    .services-grid-section {
+      padding: 120px 0;
+      background: linear-gradient(rgba(2, 4, 10, 0.95), rgba(2, 4, 10, 0.85), rgba(2, 4, 10, 0.95)), 
+                  url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1600');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .services-main-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+    }
+
+    .service-premium-card {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 30px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .service-premium-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+    }
+
+    .service-premium-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--glass-glow);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .service-premium-card:hover::before {
+      opacity: 1;
+    }
+
+    .card-left {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border-right: 1px solid var(--border-color);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .service-icon-wrap {
+      width: 80px;
+      height: 80px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.2);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: var(--primary);
+      margin-bottom: 24px;
+      transition: all 0.4s ease;
+    }
+
+    .service-premium-card:hover .service-icon-wrap {
+      transform: scale(1.1) rotate(5deg);
+      background: var(--primary);
+      color: white;
+    }
+
+    .card-left h2 {
+      font-size: 24px;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .card-right {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-right p {
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    .service-features {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .service-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-main);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .service-features li i {
+      color: var(--success);
+      font-size: 16px;
+    }
+
+    .card-cta {
+      margin-top: auto;
+    }
+
+    /* Support CTA */
+    .support-cta-section {
+      padding: 100px 0;
+      position: relative;
+      background: linear-gradient(rgba(2, 4, 10, 0.8), rgba(2, 4, 10, 0.8)), 
+                  url('https://images.unsplash.com/photo-1557426272-fc759fbb7a8d?auto=format&fit=crop&q=80&w=1600');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .support-box {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .support-box h2 {
+      font-size: 48px;
+      margin-bottom: 24px;
+      color: white;
+    }
+
+    .support-box p {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+
+    /* Footer Styles */
+    .site-footer {
+      background: #02040a;
+      padding: 80px 0 30px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-color);
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-bottom p {
+      font-size: 13px;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .services-main-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .advantage-grid { grid-template-columns: 1fr; gap: 40px; }
+      .service-premium-card { grid-template-columns: 1fr; }
+      .card-left { border-right: none; border-bottom: 1px solid var(--border-color); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-section h1 { font-size: 48px; }
+      .support-box h2 { font-size: 32px; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-bolt"></i></div>
+        Skyra<span>Soft</span>
+      </a>
+      <nav class="desktop-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="quote.html" class="btn btn-primary">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge">OUR SERVICES</span>
+        <h1>Eight Services. One Team. One Goal: Your Growth.</h1>
+        <p>Everything you need to launch, grow, and dominate your digital presence — delivered by specialists who work together under one roof, with complete accountability for your results.</p>
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-primary">Explore All Services <i class="fa-solid fa-arrow-down"></i></a>
+          <a href="quote.html" class="btn btn-secondary">Get Started <i class="fa-solid fa-rocket"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantage Section -->
+  <section class="advantage-section">
+    <div class="container">
+      <div class="advantage-grid">
+        <div class="advantage-visual">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200" alt="Specialist Team Collaboration">
+          <div style="position: absolute; bottom: 20px; left: 20px; right: 20px; padding: 20px; background: rgba(2, 4, 10, 0.8); backdrop-filter: blur(10px); border: 1px solid var(--border-color); border-radius: 15px;">
+             <p style="color: white; font-size: 14px; margin-bottom: 0;"><i class="fa-solid fa-users-viewfinder" style="color: var(--primary); margin-right: 10px;"></i> Unified Strategy. Zero Information Silos.</p>
+          </div>
+        </div>
+        <div class="advantage-content">
+          <span class="hero-badge" style="background: rgba(124, 58, 237, 0.1); color: #7c3aed; border-color: rgba(124, 58, 237, 0.2);">THE ALL-IN-ONE ADVANTAGE</span>
+          <h2>Why the Smartest Businesses Choose One Expert Agency Over Many</h2>
+          <p>When your website developer, SEO agency, social media manager, and designer are all separate — they don't talk to each other. Your website doesn't reflect your SEO strategy. Your social media doesn't drive people to a site that converts. Your design assets look different from your website.</p>
+          <div class="highlight-box">
+            <p style="color: white; font-weight: 500; font-size: 16px;">At SkyraSoft, all eight services are delivered by a team that operates as one unit. Our WordPress developers understand our SEO strategy. Our designers brief our developers. Our social media team works from the same brand guidelines as our video team.</p>
+            <p style="margin-top: 15px; margin-bottom: 0;">The result: faster delivery, higher quality output, less management overhead for you, and a digital presence that actually works together as a system.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Cards Section -->
+  <section id="services" class="services-grid-section">
+    <div class="container">
+      <div class="services-main-grid">
+        
+        <!-- Service 1: WordPress -->
+        <div class="service-premium-card">
+          <div class="card-left">
+            <div class="service-icon-wrap"><i class="fa-brands fa-wordpress"></i></div>
+            <h2>WordPress Development</h2>
+          </div>
+          <div class="card-right">
+            <p>The world's most widely used content management platform — and in the wrong hands, also the most bloated and underperforming one. We build WordPress websites and WooCommerce stores the right way: custom code, clean architecture, performance-first, and built specifically for your business, not assembled from templates.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Custom WordPress Theme Development from scratch</li>
+              <li><i class="fa-solid fa-circle-check"></i> Custom Plugin Development tailored to your workflow</li>
+              <li><i class="fa-solid fa-circle-check"></i> WooCommerce store development (simple to complex)</li>
+              <li><i class="fa-solid fa-circle-check"></i> WordPress website redesign and platform migration</li>
+              <li><i class="fa-solid fa-circle-check"></i> Performance optimisation and Core Web Vitals improvement</li>
+              <li><i class="fa-solid fa-circle-check"></i> Ongoing WordPress maintenance, updates, and security</li>
+            </ul>
+            <div class="card-cta">
+              <a href="wordpress.html" class="btn btn-secondary">Explore WordPress <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Shopify -->
+        <div class="service-premium-card">
+          <div class="card-left">
+            <div class="service-icon-wrap"><i class="fa-brands fa-shopify"></i></div>
+            <h2>Shopify Development</h2>
+          </div>
+          <div class="card-right">
+            <p>Shopify is the platform of choice for serious e-commerce businesses — but the difference between a Shopify store that performs and one that doesn't isn't the platform. It's the execution. We build fully custom Shopify stores with bespoke themes, purpose-built apps, and a conversion-first approach.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Fully custom Shopify theme development (zero templates)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Private Shopify app development for unique functionality</li>
+              <li><i class="fa-solid fa-circle-check"></i> New store setup and launch — end to end</li>
+              <li><i class="fa-solid fa-circle-check"></i> Shopify migration from WooCommerce, Magento, or others</li>
+              <li><i class="fa-solid fa-circle-check"></i> Checkout and conversion rate optimisation</li>
+              <li><i class="fa-solid fa-circle-check"></i> Shopify Plus for enterprise and rapidly scaling brands</li>
+            </ul>
+            <div class="card-cta">
+              <a href="shopify.html" class="btn btn-secondary">Explore Shopify <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: SEO -->
+        <div class="service-premium-card">
+          <div class="card-left">
+            <div class="service-icon-wrap"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <h2>Search Engine Optimisation</h2>
+          </div>
+          <div class="card-right">
+            <p>Ranking on Google for the terms your ideal customers are actually searching — that is where sustainable, compounding digital growth comes from. Organic search visibility that builds over time and generates qualified, high-intent traffic consistently.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Technical SEO audit and full-site remediation</li>
+              <li><i class="fa-solid fa-circle-check"></i> Market-specific keyword research (UK & KSA)</li>
+              <li><i class="fa-solid fa-circle-check"></i> On-page optimisation across all key pages</li>
+              <li><i class="fa-solid fa-circle-check"></i> Local SEO for UK cities and Saudi Arabian regions</li>
+              <li><i class="fa-solid fa-circle-check"></i> Content strategy, creation, and optimisation</li>
+              <li><i class="fa-solid fa-circle-check"></i> Authority-building link acquisition and digital PR</li>
+            </ul>
+            <div class="card-cta">
+              <a href="seo.html" class="btn btn-secondary">Explore SEO Services <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: SMM -->
+        <div class="service-premium-card">
+          <div class="card-left">
+            <div class="service-icon-wrap"><i class="fa-solid fa-share-nodes"></i></div>
+            <h2>Social Media Marketing</h2>
+          </div>
+          <div class="card-right">
+            <p>Most businesses have social media accounts. Very few use them in a way that generates real business value. The difference is strategy. We manage social media for businesses that are serious about building a measurable presence.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Full social media strategy (platform, content, tone)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Content creation: graphics, short-form video, captions</li>
+              <li><i class="fa-solid fa-circle-check"></i> Community management and audience engagement</li>
+              <li><i class="fa-solid fa-circle-check"></i> Paid social campaigns: Meta, TikTok, Snapchat, LinkedIn</li>
+              <li><i class="fa-solid fa-circle-check"></i> Influencer identification and partnership coordination</li>
+              <li><i class="fa-solid fa-circle-check"></i> Monthly analytics, performance reviews, and strategy</li>
+            </ul>
+            <div class="card-cta">
+              <a href="social-media.html" class="btn btn-secondary">Explore SMM <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5: Web Apps -->
+        <div class="service-premium-card">
+          <div class="card-left">
+            <div class="service-icon-wrap"><i class="fa-solid fa-code"></i></div>
+            <h2>Web Application Development</h2>
+          </div>
+          <div class="card-right">
+            <p>When your business has outgrown standard software — or when the tool you need simply doesn't exist on the market — we build it. Custom web applications engineered around the specific way your business operates.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Custom business web applications and internal tools</li>
+              <li><i class="fa-solid fa-circle-check"></i> SaaS product development (multi-tenant, billing)</li>
+              <li><i class="fa-solid fa-circle-check"></i> Client and customer portals with secure access</li>
+              <li><i class="fa-solid fa-circle-check"></i> MVP development for startups validating products</li>
+              <li><i class="fa-solid fa-circle-check"></i> API development and third-party integrations</li>
+              <li><i class="fa-solid fa-circle-check"></i> Admin dashboards and business intelligence portals</li>
+            </ul>
+            <div class="card-cta">
+              <a href="web-apps.html" class="btn btn-secondary">Explore Web Apps <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6: ERP & CRM -->
+        <div class="service-premium-card">
+          <div class="card-left">
+            <div class="service-icon-wrap"><i class="fa-solid fa-database"></i></div>
+            <h2>ERP & CRM Systems</h2>
+          </div>
+          <div class="card-right">
+            <p>Business growth creates complexity. Disconnected tools, manual processes, information scattered — these are the silent cost. We implement ERP and CRM solutions that bring your operations, sales, finance, and data together.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> CRM implementation and customisation (HubSpot, Zoho)</li>
+              <li><i class="fa-solid fa-circle-check"></i> ERP configuration for operations, inventory, HR</li>
+              <li><i class="fa-solid fa-circle-check"></i> Full data migration from spreadsheets & legacy systems</li>
+              <li><i class="fa-solid fa-circle-check"></i> Custom system integrations with your website/store</li>
+              <li><i class="fa-solid fa-circle-check"></i> Team training and adoption support</li>
+              <li><i class="fa-solid fa-circle-check"></i> Custom reports and dashboards for visibility</li>
+            </ul>
+            <div class="card-cta">
+              <a href="systems.html" class="btn btn-secondary">Explore Systems <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 7: Graphic Design -->
+        <div class="service-premium-card">
+          <div class="card-left">
+            <div class="service-icon-wrap"><i class="fa-solid fa-palette"></i></div>
+            <h2>Graphic Designing</h2>
+          </div>
+          <div class="card-right">
+            <p>Visual communication is not decoration — it is your brand's first impression, its credibility signal, and its differentiator in a crowded market. We create design assets that are visually powerful and brand-consistent.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Brand identity: logo, colors, typography, guidelines</li>
+              <li><i class="fa-solid fa-circle-check"></i> Social media templates and platform-specific assets</li>
+              <li><i class="fa-solid fa-circle-check"></i> Marketing collateral: brochures, flyers, presentations</li>
+              <li><i class="fa-solid fa-circle-check"></i> UI/UX design: wireframes, prototypes, high-fidelity</li>
+              <li><i class="fa-solid fa-circle-check"></i> Pitch deck and investor presentation design</li>
+              <li><i class="fa-solid fa-circle-check"></i> Print-ready and digital ad assets in all formats</li>
+            </ul>
+            <div class="card-cta">
+              <a href="design.html" class="btn btn-secondary">Explore Design <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 8: Video Editing -->
+        <div class="service-premium-card">
+          <div class="card-left">
+            <div class="service-icon-wrap"><i class="fa-solid fa-clapperboard"></i></div>
+            <h2>Video Editing & Production</h2>
+          </div>
+          <div class="card-right">
+            <p>Video is the highest-performing content format. We produce and edit video content that is polished, purposeful, and built to perform on the specific platforms and in the specific markets where your audience lives.</p>
+            <ul class="service-features">
+              <li><i class="fa-solid fa-circle-check"></i> Brand and promotional video production and editing</li>
+              <li><i class="fa-solid fa-circle-check"></i> Product showcase videos for e-commerce & landings</li>
+              <li><i class="fa-solid fa-circle-check"></i> Explainer videos for services, SaaS, and processes</li>
+              <li><i class="fa-solid fa-circle-check"></i> Short-form content: Reels, TikToks, YouTube Shorts</li>
+              <li><i class="fa-solid fa-circle-check"></i> Motion graphics and logo animation</li>
+              <li><i class="fa-solid fa-circle-check"></i> Full post-production: grading, sound, captions</li>
+            </ul>
+            <div class="card-cta">
+              <a href="video.html" class="btn btn-secondary">Explore Video <i class="fa-solid fa-arrow-right-long"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Support CTA -->
+  <section class="support-cta-section">
+    <div class="container">
+      <div class="support-box">
+        <span class="hero-badge">NEED GUIDANCE?</span>
+        <h2>Not Sure Which Services Your Business Needs Right Now?</h2>
+        <p>That's exactly what our free consultation is for. Tell us where your business is, what you're trying to achieve, and what's not working at the moment. We'll give you an honest, no-obligation assessment.</p>
+        <a href="contact.html" class="btn btn-primary" style="font-size: 18px; padding: 16px 40px;">Book a Free Consultation — We'll Help You Figure It Out</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 20px;">
+            <div class="logo-icon"><i class="fa-solid fa-bolt"></i></div>
+            Skyra<span>Soft</span>
+          </a>
+          <p>We build, market, and grow your business with complete accountability. Serving UK and Saudi Arabia markets with specialized teams.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="wordpress.html">WordPress Development</a></li>
+            <li><a href="shopify.html">Shopify Development</a></li>
+            <li><a href="seo.html">SEO Services</a></li>
+            <li><a href="social-media.html">Social Media Marketing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact & Info</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@skyrasoft.com"><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> hello@skyrasoft.com</a></li>
+            <li><p style="font-size: 14px; margin-top: 5px;"><i class="fa-solid fa-phone" style="margin-right: 10px;"></i> UK & KSA Support Available</p></li>
+            <li><a href="privacy.html" style="display: block; margin-top: 15px;">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 SkyraSoft Digital Limited. All rights reserved.</p>
+        <p>Crafted with <i class="fa-solid fa-heart" style="color: #ef4444;"></i> for our global clients.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

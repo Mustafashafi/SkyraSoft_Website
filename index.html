@@ -1,0 +1,2583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyraSoft | Digital Agency UK & Saudi Arabia | Web Design, SEO & Marketing</title>
+  <meta name="description"
+    content="SkyraSoft is a full-service digital agency serving businesses in the UK and Saudi Arabia. WordPress, Shopify, SEO, SMM, Web Apps, ERP/CRM, Design & Video — all under one roof.">
+  <meta name="keywords"
+    content="digital agency UK, digital agency Saudi Arabia, web design agency UK, Shopify developer UK, WordPress agency UK, SEO agency UK, digital marketing agency Saudi Arabia, web development company KSA, full service digital agency, social media marketing UK">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #02040a;
+      --bg-card: rgba(255, 255, 255, 0.05);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --primary: #3b82f6;
+      --accent-purple: #7c3aed;
+      --accent-indigo: #4f46e5;
+      --success: #10b981;
+      --danger: #ef4444;
+      --border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.2s;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      background: linear-gradient(90deg, #fff, #94a3b8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .badge-blue {
+      background: rgba(59, 130, 246, 0.1);
+      color: #3b82f6;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .section-title h2 {
+        font-size: 28px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
+  <style id="sections-styles">
+    /* CSS for section section:Header */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: rgba(3, 7, 18, 0.8);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      height: 80px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 20px;
+      color: white;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .text-blue {
+      color: var(--primary);
+    }
+
+    .desktop-nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    .desktop-nav a {
+      color: var(--text-muted);
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .desktop-nav a:hover,
+    .desktop-nav a.active {
+      color: white;
+    }
+
+    .header-btn {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 991px) {
+      .desktop-nav {
+        display: none;
+      }
+    }
+
+    .hero-section {
+      position: relative;
+      padding-top: 180px;
+      padding-bottom: 150px;
+      overflow: hidden;
+      background: linear-gradient(to bottom, rgba(2, 4, 10, 0.8), rgba(2, 4, 10, 0.4)), url("images/hero_bg_premium.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+
+
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .trusted-badge {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 8px 16px;
+      border-radius: 100px;
+      color: var(--text-main);
+      font-size: 14px;
+      margin-bottom: 32px;
+      display: inline-block;
+    }
+
+    .hero-title {
+      font-size: 64px;
+      line-height: 1.1;
+      font-weight: 800;
+      margin-bottom: 24px;
+      color: white;
+    }
+
+    .text-highlight {
+      color: #4f46e5;
+      background: linear-gradient(90deg, #4f46e5, #7c3aed);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: var(--text-muted);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .hero-tags {
+      margin-top: 16px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .hero-note {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 40px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    /* CSS for section section:Stats */
+    /* Ultra-Premium Stats Strip (Floating Glassmorphism) */
+    .stats-strip {
+      margin: -40px auto 0;
+      width: 95%;
+      max-width: 1400px;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 30px;
+      position: relative;
+      z-index: 100;
+      padding: 40px 20px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                  inset 0 1px 1px rgba(255, 255, 255, 0.05);
+    }
+
+    .stats-strip-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .stat-item-premium {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      padding: 10px;
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+      animation: revealStat 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      transition: transform 0.3s ease;
+    }
+
+    .stat-item-premium:hover {
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    .stat-item-premium:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 15%;
+      height: 70%;
+      width: 1px;
+      background: linear-gradient(to bottom, 
+                  transparent 0%, 
+                  rgba(59, 130, 246, 0.4) 50%, 
+                  transparent 100%);
+    }
+
+    .stat-val {
+      font-size: 42px;
+      font-weight: 900;
+      display: block;
+      line-height: 1;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #fff 0%, #3b82f6 50%, #8b5cf6 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 3s linear infinite;
+    }
+
+    @keyframes shine {
+      to { background-position: 200% center; }
+    }
+
+    .stat-lbl {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1.4;
+    }
+
+    @keyframes revealStat {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .stat-item-premium:nth-child(1) { animation-delay: 0.2s; }
+    .stat-item-premium:nth-child(2) { animation-delay: 0.3s; }
+    .stat-item-premium:nth-child(3) { animation-delay: 0.4s; }
+    .stat-item-premium:nth-child(4) { animation-delay: 0.5s; }
+    .stat-item-premium:nth-child(5) { animation-delay: 0.6s; }
+
+    @media (max-width: 1024px) {
+      .stats-strip {
+        margin-top: -60px;
+        padding: 30px 15px;
+      }
+      .stat-val {
+        font-size: 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .stats-strip {
+        margin-top: 20px;
+        width: calc(100% - 40px);
+        border-radius: 20px;
+      }
+      .stats-strip-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+      .stat-item-premium:not(:last-child)::after {
+        display: none;
+      }
+      .stat-item-premium:last-child {
+        grid-column: span 2;
+      }
+    }
+
+    /* Innovation Hub Adjustments */
+    .innovation-hub-section {
+      padding: 120px 0;
+      background: linear-gradient(rgba(2, 4, 10, 0.88), rgba(2, 4, 10, 0.88)), 
+                  url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1600');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    /* CSS for section section:ProblemSolution */
+    .problem-solution-section {
+      padding: 120px 0;
+      background: linear-gradient(rgba(15, 20, 51, 0.9), rgba(15, 20, 51, 0.9)), 
+                  url('https://images.unsplash.com/photo-1542393545-10f5cde2c810?auto=format&fit=crop&q=80&w=1600');
+      background-size: cover;
+      background-position: center;
+    }
+    /* Innovation Hub (Story focus) */
+    .innovation-hub-section {
+      padding: 120px 0;
+      background: linear-gradient(rgba(2, 4, 10, 0.95), rgba(2, 4, 10, 0.95)), 
+                  url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1600');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .bento-wrapper {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    .bento-main-text {
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .bento-main-text h2 {
+      font-size: 48px;
+      line-height: 1.1;
+      margin: 24px 0;
+      color: white;
+      font-weight: 800;
+    }
+
+    .bento-main-text p {
+      color: var(--text-muted);
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .bento-grid-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap: 20px;
+    }
+
+    .metric-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 30px;
+      border-radius: 24px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--primary);
+      transform: translateY(-5px);
+    }
+
+    .metric-card.large {
+      grid-column: span 2;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(124, 58, 237, 0.1));
+    }
+
+    .metric-card h3 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .metric-card span {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .metric-card p {
+      font-size: 14px;
+      color: var(--text-main);
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .skill-tag {
+      padding: 6px 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 100px;
+      font-size: 12px;
+      color: white;
+    }
+
+    @media (max-width: 1100px) {
+      .bento-wrapper {
+        grid-template-columns: 1fr;
+      }
+      
+      .bento-main-text {
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .bento-grid-metrics {
+        grid-template-columns: 1fr;
+      }
+      
+      .metric-card.large {
+        grid-column: span 1;
+      }
+      
+      .bento-main-text h2 {
+        font-size: 32px;
+      }
+    }
+    .comparison-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      position: relative;
+    }
+
+    .comparison-box {
+      padding: 40px;
+      border-radius: 16px;
+    }
+
+    .problem-box {
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      background: rgba(239, 68, 68, 0.05);
+    }
+
+    .solution-box {
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      background: rgba(16, 185, 129, 0.05);
+      position: relative;
+      top: 20px;
+      /* Visual offset */
+    }
+
+    .problem-title {
+      color: var(--danger);
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+
+    .solution-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .solution-title {
+      color: var(--success);
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .solution-desc {
+      margin-bottom: 32px;
+      color: var(--text-muted);
+    }
+
+    .comparison-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      color: var(--text-main);
+    }
+
+    .icon-cross {
+      width: 16px;
+      height: 16px;
+      margin-top: 4px;
+      filter: invert(38%) sepia(93%) saturate(3964%) hue-rotate(343deg) brightness(96%) contrast(96%);
+      /* Red-ish */
+    }
+
+    .icon-check {
+      width: 16px;
+      height: 16px;
+      margin-top: 4px;
+      filter: invert(63%) sepia(68%) saturate(450%) hue-rotate(105deg) brightness(87%) contrast(88%);
+      /* Green-ish */
+    }
+
+    .icon-check-large {
+      width: 24px;
+      height: 24px;
+    }
+
+    .full-width-btn {
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .comparison-container {
+        grid-template-columns: 1fr;
+      }
+
+      .solution-box {
+        top: 0;
+      }
+    }
+
+    /* CSS for section section:Services */
+    .services-section {
+      padding: 120px 0;
+      background: linear-gradient(rgba(2, 4, 10, 0.92), rgba(2, 4, 10, 0.92)), 
+                  url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1600');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .icon-wp {
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
+    }
+
+    .icon-shopify {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .icon-seo {
+      background: linear-gradient(135deg, #06b6d4, #0891b2);
+    }
+
+    .icon-smm {
+      background: linear-gradient(135deg, #ec4899, #db2777);
+    }
+
+    .icon-app {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    }
+
+    .icon-erp {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+    }
+
+    .icon-design {
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+    }
+
+    .icon-video {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* CSS for section section:WhyUs */
+    .why-us-section {
+      padding: 120px 0;
+      background: linear-gradient(rgba(2, 4, 10, 0.85), rgba(2, 4, 10, 0.85)), 
+                  url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1600');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .why-us-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .feature-card {
+      text-align: center;
+      padding: 32px;
+      background: transparent;
+      border: 1px solid transparent;
+    }
+
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+
+    .feature-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--text-main);
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .why-us-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* CSS for section section:Process Redesigned */
+    .process-section {
+      padding: 120px 0;
+      background: linear-gradient(rgba(2, 4, 10, 0.9), rgba(2, 4, 10, 0.9)), 
+                  url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1600');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      margin-top: 60px;
+    }    .process-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      border-radius: 24px;
+      padding: 50px 35px 45px;
+      position: relative;
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      display: flex;
+      flex-direction: column;
+      /* overflow: hidden removed to allow protruding badge */
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4),
+                  0 0 20px rgba(59, 130, 246, 0.1),
+                  inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    }
+
+    /* Arrow Connector */
+    .process-card:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3Cpath d='m12 5 7 7-7 7'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 32px;
+      height: 32px;
+      opacity: 0.6;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    /* Desktop Arrows (3 columns) */
+    @media (min-width: 1025px) {
+      .process-card:not(:last-child)::after {
+        right: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .process-card:nth-child(3)::after {
+        display: none;
+      }
+    }
+
+
+
+    .process-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), #8b5cf6, var(--primary));
+      background-size: 200% auto;
+      opacity: 1; /* Highlighted always */
+      transition: opacity 0.3s ease;
+      border-radius: 20px 20px 0 0;
+      animation: gradientFlow 3s linear infinite;
+      z-index: 10;
+    }
+
+    @keyframes gradientFlow {
+      to { background-position: 200% center; }
+    }
+
+    .step-icon-box {
+      width: 60px;
+      height: 60px;
+      background: var(--primary); /* Highlighted always */
+      color: white;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 28px;
+      position: relative;
+      transition: all 0.4s ease;
+      z-index: 1;
+      box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+    }
+
+
+
+    .step-icon-box svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    .process-card h3 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 18px;
+      color: white;
+      position: relative;
+      z-index: 1;
+      letter-spacing: -0.5px;
+    }
+
+    .process-card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.7);
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-step-badge {
+      position: absolute;
+      top: -24px;
+      right: -24px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    .process-step-badge svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .badge-color-1 { background: linear-gradient(135deg, #3b82f6, #1e40af); }
+    .badge-color-2 { background: linear-gradient(135deg, #8b5cf6, #5b21b6); }
+    .badge-color-3 { background: linear-gradient(135deg, #10b981, #065f46); }
+    .badge-color-4 { background: linear-gradient(135deg, #f59e0b, #92400e); }
+    .badge-color-5 { background: linear-gradient(135deg, #ef4444, #991b1b); }
+
+
+
+    @media (max-width: 1024px) {
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .process-section {
+        padding: 80px 0;
+      }
+      
+      .process-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      
+      .process-card {
+        padding: 40px 28px;
+      }
+    }
+
+    /* CSS for section section:Unique Hub Section */
+    .unique-hub-section {
+      padding: 120px 0;
+      background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.05), transparent),
+        radial-gradient(circle at bottom left, rgba(124, 58, 237, 0.05), transparent);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hub-container {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .hub-content h2 {
+      font-size: 56px;
+      line-height: 1.1;
+      font-weight: 800;
+      margin-bottom: 32px;
+      background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hub-content p {
+      font-size: 20px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 48px;
+    }
+
+    .hub-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .hub-widget {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 32px;
+      border-radius: 24px;
+      position: relative;
+      transition: all 0.4s ease;
+    }
+
+    .hub-widget:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: rgba(59, 130, 246, 0.3);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .hub-widget .icon-box {
+      width: 50px;
+      height: 50px;
+      background: rgba(59, 130, 246, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      color: var(--primary);
+    }
+
+    .hub-widget h4 {
+      font-size: 20px;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .hub-widget p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 0;
+      line-height: 1.5;
+    }
+
+    .location-tag {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(59, 130, 246, 0.2);
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hub-cta-wrap {
+      margin-top: 40px;
+      display: flex;
+      gap: 20px;
+    }
+
+    @media (max-width: 1024px) {
+      .hub-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
+      .hub-content {
+        text-align: center;
+      }
+
+      .hub-cta-wrap {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hub-stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hub-content h2 {
+        font-size: 40px;
+      }
+    }
+
+    /* CSS for section section:Portfolio */
+    .portfolio-section {
+      padding: 120px 0;
+      background: linear-gradient(rgba(2, 4, 10, 0.88), rgba(15, 23, 42, 0.88)), 
+                  url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1600');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .portfolio-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .portfolio-image {
+      height: 240px;
+      position: relative;
+      overflow: hidden;
+      background: #1e293b;
+    }
+
+    .portfolio-image img.project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .portfolio-card:hover .portfolio-image img.project-img {
+      transform: scale(1.1);
+    }
+
+    .portfolio-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      padding: 12px;
+    }
+
+    .portfolio-icon img {
+      width: 100%;
+      height: 100%;
+      opacity: 0.9;
+    }
+
+    .portfolio-content {
+      padding: 24px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      background: rgba(59, 130, 246, 0.1);
+      color: var(--primary);
+    }
+
+    .portfolio-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: white;
+    }
+
+    .portfolio-card p {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 991px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* CSS for section section:Markets */
+    .markets-section {
+      padding: 80px 0;
+      background-color: #0f1433;
+    }
+
+    .markets-grid {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .market-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 40px;
+      width: 270px;
+      text-align: center;
+    }
+
+    .flag {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .market-card h3 {
+      color: white;
+      font-size: 20px;
+    }
+
+    .industries-list {
+      text-align: center;
+    }
+
+    .industry-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .industry-tag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      padding: 10px 20px;
+      border-radius: 100px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .industry-tag img {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* CSS for section section:Founder */
+    .founder-section {
+      padding: 100px 0;
+    }
+
+    .founder-content {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      background: rgba(30, 41, 59, 0.4);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 60px;
+    }
+
+    .founder-image {
+      flex-shrink: 0;
+    }
+
+    .image-placeholder {
+      width: 400px;
+      height: 400px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    .image-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .founder-text h2 {
+      font-size: 36px;
+      margin: 16px 0 24px;
+      color: white;
+    }
+
+    .founder-quote {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    .founder-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .founder-meta strong {
+      color: white;
+      font-size: 18px;
+    }
+
+    .founder-meta span {
+      color: var(--primary);
+      font-size: 14px;
+    }
+
+    @media (max-width: 991px) {
+      .founder-content {
+        flex-direction: column;
+        padding: 40px;
+        gap: 40px;
+      }
+
+      .image-placeholder {
+        width: 100%;
+        max-width: 300px;
+        height: 300px;
+      }
+    }
+
+    /* CSS for section section:Testimonials */
+    .testimonials-section {
+      padding: 120px 0;
+      background: linear-gradient(rgba(15, 20, 51, 0.9), rgba(15, 20, 51, 0.9)), 
+                  url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1600');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .testimonial-card {
+      background: rgba(30, 41, 59, 0.4);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .quote-icon {
+      width: 35px;
+      margin: 0 auto 24px;
+      opacity: 0.5;
+    }
+
+    .testimonial-text {
+      font-size: 24px;
+      color: var(--text-main);
+      margin-bottom: 32px;
+      font-weight: 500;
+    }
+
+    .client-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .client-info > div:last-child {
+      text-align: left;
+    }
+
+    .client-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid var(--primary);
+      flex-shrink: 0;
+    }
+
+    .client-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .client-name {
+      font-weight: 700;
+      color: white;
+      line-height: 1.2;
+    }
+
+    .client-role {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* CSS for section section:Insights */
+    .insights-section {
+      padding: 100px 0;
+    }
+
+    .section-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 60px;
+    }
+
+    .view-all-link {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .insights-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .insight-card {
+      background: transparent;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .insight-image {
+      height: 200px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    .insight-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .insight-card:hover .insight-image img {
+      transform: scale(1.05);
+    }
+
+    .insight-content .tag {
+      font-size: 12px;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: block;
+      background: none;
+      padding: 0;
+    }
+
+    .insight-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: white;
+      line-height: 1.4;
+    }
+
+    .insight-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .section-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .insights-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* CSS for section section:CTA */
+    .cta-section {
+      padding: 80px 0;
+      background-color: #0f1433;
+      text-align: center;
+    }
+
+    .cta-content h2 {
+      font-size: 48px;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .cta-content p {
+      font-size: 18px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .cta-content h2 {
+        font-size: 32px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    /* CSS for section section:Footer */
+    .site-footer {
+      background-color: #02040a;
+      padding: 80px 0 40px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand p {
+      color: var(--text-muted);
+      margin: 20px 0;
+      line-height: 1.6;
+      max-width: 300px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-links img {
+      width: 20px;
+      height: 20px;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .social-links a:hover img {
+      opacity: 1;
+    }
+
+    .footer-links h4,
+    .footer-contact h4 {
+      color: white;
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+
+    .footer-links ul li,
+    .footer-contact ul li {
+      margin-bottom: 12px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .footer-contact ul li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .footer-contact img {
+      width: 16px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-color);
+      padding-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .legal-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    @media (max-width: 991px) {
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+
+      .legal-links {
+        justify-content: center;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-bolt" style="color: white; font-size: 16px;"></i>
+        </div>
+        <span class="logo-text">Skyra<span class="text-blue">Soft</span></span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a href="quote.html" class="btn btn-primary header-btn">Get a Quote</a>
+    </div>
+  </header>
+  <section class="hero-section">
+    <div class="container hero-content">
+      <div class="trusted-badge">
+        <span>TRUSTED BY GROWING BUSINESSES IN THE UK 🇬🇧 AND SAUDI ARABIA 🇸🇦</span>
+      </div>
+
+      <h1 class="hero-title">
+        We Build. We Market.<br>
+        <span class="text-highlight">We Grow Your Business.</span>
+      </h1>
+
+      <div class="hero-subtitle">
+        <p>One agency. Every digital solution your business needs — from your very first website to your next major
+          market expansion. No more juggling freelancers. No more miscommunication between vendors. SkyraSoft brings
+          together expert WordPress developers, Shopify specialists, SEO strategists, social media managers, UI/UX
+          designers, video producers, web application engineers, and ERP & CRM consultants — working together as a
+          single, unified team with one shared mission: your measurable growth.</p>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get a Free Consultation</a>
+        <a href="#portfolio" class="btn btn-secondary">See Our Work</a>
+      </div>
+
+      <p class="hero-note">No commitment required. Response within 2–4 hours.</p>
+    </div>
+  </section>
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stats-strip-container">
+        <!-- Stat 1 -->
+        <div class="stat-item-premium">
+          <span class="stat-val">50+</span>
+          <span class="stat-lbl">Projects Delivered</span>
+        </div>
+        <!-- Stat 2 -->
+        <div class="stat-item-premium">
+          <span class="stat-val">3</span>
+          <span class="stat-lbl">Countries Served: UK, KSA & Pakistan</span>
+        </div>
+        <!-- Stat 3 -->
+        <div class="stat-item-premium">
+          <span class="stat-val">8</span>
+          <span class="stat-lbl">Expert Services Under One Roof</span>
+        </div>
+        <!-- Stat 4 -->
+        <div class="stat-item-premium">
+          <span class="stat-val">2–4 Hrs</span>
+          <span class="stat-lbl">Average Response Time</span>
+        </div>
+        <!-- Stat 5 -->
+        <div class="stat-item-premium">
+          <span class="stat-val">100%</span>
+          <span class="stat-lbl">Custom-Built Solutions — Zero Templates</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="innovation-hub-section">
+    <div class="container">
+      <div class="bento-wrapper">
+        <!-- Main Brand Story -->
+        <div class="bento-main-text">
+          <div class="badge badge-blue">SKYRASOFT INNOVATION</div>
+          <h2>Not Another Agency. A Growth Partner That <span class="text-highlight">Actually Gets It.</span></h2>
+          <p>We started SkyraSoft because we saw business owners dealing with disjointed teams and inconsistent quality. We replaced that chaos with a unified, high-performance team dedicated to localized growth in the UK and Saudi Arabia.</p>
+          <p>Our team of 10 specialists doesn't work in isolation—we work together with full context of your business goals.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Asymmetric Strategy</span>
+            <span class="skill-tag">Custom Engineering</span>
+            <span class="skill-tag">Conversion Focused</span>
+            <span class="skill-tag">UK & KSA Context</span>
+          </div>
+          <div style="margin-top: 32px;">
+            <a href="#about" class="btn btn-secondary">Our Full Story →</a>
+          </div>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div class="bento-grid-metrics">
+          <div class="metric-card large">
+            <span>Market Reach</span>
+            <h3>Global Footprint</h3>
+            <p>Serving the UK, KSA, and beyond with deep cultural and commercial understanding.</p>
+          </div>
+          
+          <div class="metric-card">
+            <span>Velocity</span>
+            <h3>2–4 Hrs</h3>
+            <p>Average response time for our partners.</p>
+          </div>
+
+          <div class="metric-card">
+            <span>Portfolio</span>
+            <h3>50+</h3>
+            <p>High-impact digital projects delivered.</p>
+          </div>
+
+          <div class="metric-card large">
+            <span>Philosophy</span>
+            <h3>100% Custom</h3>
+            <p>Zero templates. Every line of code and every pixel is crafted specifically for your ROI.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="problem-solution-section">
+    <div class="container">
+      <div class="section-title">
+        <div class="badge badge-blue">SOUND FAMILIAR?</div>
+        <h2>Running a Business Shouldn't Mean Managing Five Different Vendors</h2>
+        <p>Here's what most business owners are dealing with before they come to us:</p>
+      </div>
+
+      <div class="comparison-container">
+        <!-- Left Side: The Problem -->
+        <div class="comparison-box problem-box">
+          <h3 class="problem-title">The chaotic approach of hiring disconnected...</h3>
+          <ul class="comparison-list">
+            <li>
+              <img src="images/36_431.svg" class="icon-cross" alt="x">
+              <span>Web developer who built the site but has no idea what SEO is</span>
+            </li>
+            <li>
+              <img src="images/36_436.svg" class="icon-cross" alt="x">
+              <span>SEO agency that keeps sending reports but can't explain why traffic isn't converting</span>
+            </li>
+            <li>
+              <img src="images/36_441.svg" class="icon-cross" alt="x">
+              <span>Social media manager who posts content but drives zero measurable business</span>
+            </li>
+            <li>
+              <img src="images/36_446.svg" class="icon-cross" alt="x">
+              <span>Designer who delivered beautiful assets that don't match the website</span>
+            </li>
+            <li>
+              <img src="images/36_451.svg" class="icon-cross" alt="x">
+              <span>Software consultant who set up a CRM that nobody knows how to use</span>
+            </li>
+            <li>
+              <img src="images/36_456.svg" class="icon-cross" alt="x">
+              <span>Multiple invoices, multiple points of contact, and nobody taking full ownership</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Side: The Solution -->
+        <div class="comparison-box solution-box">
+          <div class="solution-header">
+            <h3 class="solution-title">The SkyraSoft Way</h3>
+            <img src="images/36_467.svg" class="icon-check-large" alt="check">
+          </div>
+          <p class="solution-desc">At SkyraSoft, one team handles everything — and because we're all working together
+            with a shared understanding of your business, everything is joined up. Your website reflects your brand.
+            Your SEO strategy aligns with your content. Your social media drives people to a site that converts. Your
+            operations system connects to your marketing data. Every piece works as part of a whole.</p>
+
+          <a href="#contact" class="btn btn-primary full-width-btn">Let's Fix This Together</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-title">
+        <div class="badge badge-blue">WHAT WE DO</div>
+        <h2>Every Service Your Business Needs to Win Digitally</h2>
+        <p>Whether you're launching your first website, scaling your e-commerce store, building your brand online, or
+          systemising your operations — we have the specialist team and the proven process to get you there. All
+          services are delivered by dedicated experts, not generalists wearing too many hats.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- WordPress -->
+        <div class="service-card">
+          <div class="service-icon icon-wp">
+            <img src="images/36_119.svg" alt="WordPress">
+          </div>
+          <h3>WordPress Development</h3>
+          <p>Custom themes, powerful plugins, and high-performance WooCommerce stores — built from scratch, engineered
+            to scale, and designed to convert visitors into customers.</p>
+          <ul class="service-offerings"
+            style="font-size: 13px; color: var(--text-muted); margin-top: 15px; list-style: disc; padding-left: 20px;">
+            <li>Custom Theme Development</li>
+            <li>Plugin Development</li>
+            <li>WooCommerce Stores</li>
+            <li>Performance Optimisation</li>
+            <li>Security & Maintenance</li>
+          </ul>
+        </div>
+
+        <!-- Shopify -->
+        <div class="service-card">
+          <div class="service-icon icon-shopify">
+            <img src="images/36_128.svg" alt="Shopify">
+          </div>
+          <h3>Shopify Development</h3>
+          <p>Bespoke Shopify stores and custom apps that reflect your brand, remove friction from the checkout, and turn
+            browsers into buyers — across UK and Saudi markets.</p>
+          <ul class="service-offerings"
+            style="font-size: 13px; color: var(--text-muted); margin-top: 15px; list-style: disc; padding-left: 20px;">
+            <li>Custom Shopify Themes</li>
+            <li>Shopify App Development</li>
+            <li>Store Launch & Migration</li>
+            <li>Checkout Optimisation</li>
+            <li>Shopify Plus</li>
+          </ul>
+        </div>
+
+        <!-- SEO -->
+        <div class="service-card">
+          <div class="service-icon icon-seo">
+            <img src="images/36_137.svg" alt="SEO">
+          </div>
+          <h3>SEO</h3>
+          <p>Organic search visibility that compounds over time — built on technical foundations, keyword strategy, and
+            content that earns rankings in both Google UK and Saudi Arabia.</p>
+          <ul class="service-offerings"
+            style="font-size: 13px; color: var(--text-muted); margin-top: 15px; list-style: disc; padding-left: 20px;">
+            <li>Technical SEO</li>
+            <li>On-Page Optimisation</li>
+            <li>Local SEO UK & KSA</li>
+            <li>Link Building</li>
+            <li>Content Strategy</li>
+          </ul>
+        </div>
+
+        <!-- SMM -->
+        <div class="service-card">
+          <div class="service-icon icon-smm">
+            <img src="images/36_146.svg" alt="SMM">
+          </div>
+          <h3>SMM & Marketing</h3>
+          <p>Strategy-led social media management and paid advertising that builds real brand presence and generates
+            measurable business results — not just likes.</p>
+          <ul class="service-offerings"
+            style="font-size: 13px; color: var(--text-muted); margin-top: 15px; list-style: disc; padding-left: 20px;">
+            <li>Social Strategy</li>
+            <li>Content Creation</li>
+            <li>Paid Social Ads</li>
+            <li>Community Management</li>
+            <li>Analytics</li>
+          </ul>
+        </div>
+
+        <!-- Web Apps -->
+        <div class="service-card">
+          <div class="service-icon icon-app">
+            <img src="images/36_155.svg" alt="Web Apps">
+          </div>
+          <h3>Web Applications</h3>
+          <p>Custom web applications engineered to solve your unique operational challenges — intuitive to use, scalable
+            to grow with, and built on clean, maintainable code.</p>
+          <ul class="service-offerings"
+            style="font-size: 13px; color: var(--text-muted); margin-top: 15px; list-style: disc; padding-left: 20px;">
+            <li>Business Web Apps</li>
+            <li>SaaS Platforms</li>
+            <li>Client Portals</li>
+            <li>MVP Development</li>
+            <li>API Integrations</li>
+          </ul>
+        </div>
+
+        <!-- ERP/CRM -->
+        <div class="service-card">
+          <div class="service-icon icon-erp">
+            <img src="images/36_164.svg" alt="ERP">
+          </div>
+          <h3>ERP & CRM Systems</h3>
+          <p>We implement and customise ERP and CRM systems that bring your sales, operations, and customer data
+            together — so you run your business on clarity, not guesswork.</p>
+          <ul class="service-offerings"
+            style="font-size: 13px; color: var(--text-muted); margin-top: 15px; list-style: disc; padding-left: 20px;">
+            <li>CRM Implementation</li>
+            <li>ERP Configuration</li>
+            <li>Data Migration</li>
+            <li>Team Training</li>
+            <li>Custom Dashboards</li>
+          </ul>
+        </div>
+
+        <!-- Graphic Design -->
+        <div class="service-card">
+          <div class="service-icon icon-design">
+            <img src="images/36_173.svg" alt="Design">
+          </div>
+          <h3>Graphic Designing</h3>
+          <p>Purposeful visual design that makes your brand impossible to ignore — from your core brand identity to
+            every piece of marketing collateral you need in the market.</p>
+          <ul class="service-offerings"
+            style="font-size: 13px; color: var(--text-muted); margin-top: 15px; list-style: disc; padding-left: 20px;">
+            <li>Brand Identity & Logo</li>
+            <li>Social Media Graphics</li>
+            <li>UI/UX Design</li>
+            <li>Marketing Materials</li>
+            <li>Presentations</li>
+          </ul>
+        </div>
+
+        <!-- Video -->
+        <div class="service-card">
+          <div class="service-icon icon-video">
+            <img src="images/36_182.svg" alt="Video">
+          </div>
+          <h3>Video Editing & Production</h3>
+          <p>Professional video content that captures attention, communicates your message, and drives action — from
+            brand films and product videos to social reels and motion graphics.</p>
+          <ul class="service-offerings"
+            style="font-size: 13px; color: var(--text-muted); margin-top: 15px; list-style: disc; padding-left: 20px;">
+            <li>Brand Videos</li>
+            <li>Product Showcase</li>
+            <li>Explainer Videos</li>
+            <li>Social Media Reels</li>
+            <li>Motion Graphics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="why-us-section" id="why-us">
+    <div class="container">
+      <div class="section-title">
+        <div class="badge badge-blue">WHY SKYRASOFT</div>
+        <h2>The 8 Reasons Growing Businesses in the UK and Saudi Arabia Choose Us</h2>
+      </div>
+
+      <div class="grid why-us-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="feature-card">
+          <div class="feature-icon"><img src="images/36_198.svg" alt="Roof"></div>
+          <h3>One Agency. Every Solution.</h3>
+          <p>Stop managing multiple vendors, chasing five different invoices, and losing context every time someone new
+            picks up your project. We handle your website, marketing, SEO, design, video, and software — as one team,
+            under one agreement, with complete accountability.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><img src="images/36_207.svg" alt="Globe"></div>
+          <h3>We Know Your Market Inside Out</h3>
+          <p>We don't just understand digital — we understand how consumers in the UK and Saudi Arabia think, what they
+            expect from a brand online, what drives them to buy, and what drives them away. That market intelligence is
+            built into every piece of work we deliver.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><img src="images/36_216.svg" alt="Custom"></div>
+          <h3>Custom-Built for Your Business, Every Time</h3>
+          <p>We don't use pre-made templates or apply the same approach to every client. Every solution — whether it's a
+            website, an SEO strategy, or a social media campaign — starts with a deep understanding of your specific
+            business, audience, and goals.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><img src="images/36_225.svg" alt="Rocket"></div>
+          <h3>We Grow With You</h3>
+          <p>Whether you're a startup launching your first digital presence or an established business looking to scale
+            into new markets, we have the right solution for where you are right now — and the capacity to evolve as
+            your needs do.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><img src="images/36_234.svg" alt="Lightning"></div>
+          <h3>Speed Without Sacrificing Quality</h3>
+          <p>We respect your timelines. Our structured project delivery process means you get updates at every stage,
+            clear milestones, and on-time delivery — without the quality shortcuts that plague agencies under deadline
+            pressure.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><img src="images/36_243.svg" alt="Conversation"></div>
+          <h3>We Listen Before We Recommend Anything</h3>
+          <p>Every client relationship starts with a free, no-obligation consultation. We ask the right questions,
+            understand your situation fully, and only then do we propose a strategy — one that's built around your
+            business, not our preferred services.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><img src="images/36_198.svg" alt="Document"></div>
+          <h3>You'll Always Know What We're Doing and Why</h3>
+          <p>No black boxes. No vague progress updates. You'll always have clear visibility into what we're working on,
+            what results we're targeting, and how we measure success. Honest timelines and honest communication —
+            always.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><img src="images/36_207.svg" alt="Target"></div>
+          <h3>Delivery Is Not the Finish Line — Results Are</h3>
+          <p>Most agencies consider a project done when they send the final file. We consider it done when your business
+            outcomes improve. We track performance after delivery, identify what can be optimised, and stay engaged with
+            your growth.</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="#contact" class="btn btn-primary">Start a Conversation — It's Free</a>
+      </div>
+    </div>
+  </section>
+  <section class="process-section">
+    <div class="container">
+      <div class="section-title">
+        <div class="badge badge-blue">OUR PROCESS</div>
+        <h2>From First Conversation to Long-Term Growth — Here's Exactly How We Work</h2>
+        <p>We believe in a process that keeps you fully informed at every stage and eliminates the surprises that make
+          working with agencies frustrating. Here's what working with SkyraSoft looks like:</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-step-badge badge-color-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="step-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Free Discovery Consultation</h3>
+          <p>We start by understanding your business from every angle — your current digital situation, where your
+            competitors are, what your customers need, and what you want to achieve.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-badge badge-color-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div class="step-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3>Research & Strategy</h3>
+          <p>Before we propose anything, we do our homework. Market research, competitor analysis, audience profiling,
+            and a gap analysis of your current digital presence.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-badge badge-color-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="step-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3>Tailored Proposal</h3>
+          <p>We put together a proposal that's specific to your business — what we'll do, in what order, with what
+            expected outcomes, on what timeline, and for what investment.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-badge badge-color-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="step-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Build, Create & Execute</h3>
+          <p>Our team gets to work. You receive regular progress updates, have direct access to your project manager,
+            and review deliverables at defined checkpoints.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-badge badge-color-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="step-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Launch, Measure & Optimise</h3>
+          <p>We launch, monitor performance closely, and report back with clear data. Then we identify what's working
+            best and optimise accordingly.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <section class="portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-title">
+        <div class="badge badge-blue">OUR WORK</div>
+        <h2>Projects That Started With a Problem and Ended With a Result</h2>
+        <p>Every project in our portfolio represents a real business challenge we were given and a measurable outcome we
+          delivered. Below is a snapshot — visit the full portfolio for detailed case studies across all eight services.
+        </p>
+      </div>
+
+      <div class="grid portfolio-grid">
+        <!-- Case Study 1 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" alt="Shopify Store" class="project-img">
+            <div class="portfolio-icon"><img src="images/57_263.svg" alt="Shopify"></div>
+          </div>
+          <div class="portfolio-content">
+            <div class="tag">Shopify + SEO | UK</div>
+            <h3>3× Conversion Rate Increase in 90 Days</h3>
+            <p>A UK clothing brand was losing customers to competitors. We built a fully bespoke Shopify theme and
+              mobile-first checkout flow. Conversion rate tripled in 90 days.</p>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800" alt="Restaurant Interior" class="project-img">
+            <div class="portfolio-icon"><img src="images/57_273.svg" alt="WordPress"></div>
+          </div>
+          <div class="portfolio-content">
+            <div class="tag">WordPress + SEO | KSA</div>
+            <h3>200% Organic Traffic Growth in 6 Months</h3>
+            <p>A Riyadh restaurant group was invisible on Google. We rebuilt their site with custom WordPress and
+              implemented a local SEO strategy. Traffic grew 200% in 6 months.</p>
+          </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="SaaS Dashboard" class="project-img">
+            <div class="portfolio-icon"><img src="images/57_283.svg" alt="Social"></div>
+          </div>
+          <div class="portfolio-content">
+            <div class="tag">Web Application | UK</div>
+            <h3>40% Reduction in Admin Hours</h3>
+            <p>A UK SaaS startup was struggling with manual processes. We built a custom client management platform that
+              automated onboarding and billing, reclaiming 40% of admin time.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 60px;">
+        <a href="#portfolio" class="btn btn-primary">View the Full Portfolio →</a>
+      </div>
+    </div>
+  </section>
+  <section class="markets-section">
+    <div class="container">
+      <div class="section-title">
+        <div class="badge badge-blue">OUR REACH</div>
+        <h2>Markets We Dominate</h2>
+        <p>Serving two major global hubs with native expertise. Built specifically for UK and Saudi Arabian businesses.
+        </p>
+      </div>
+
+      <div class="markets-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 80px;">
+        <div class="market-panel"
+          style="background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=600'); background-size: cover; background-position: center; border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; transition: transform 0.3s ease;">
+          <div class="flag" style="font-size: 40px; margin-bottom: 20px;">🇬🇧</div>
+          <h3 style="color: white; font-size: 24px; margin-bottom: 15px;">United Kingdom</h3>
+          <p style="color: var(--text-muted); line-height: 1.6; font-size: 15px;">The UK is one of the most competitive
+            digital markets in the world. Consumers expect fast-loading websites, seamless mobile experiences, and
+            brands that communicate with clarity and credibility.</p>
+          <ul
+            style="color: var(--text-muted); font-size: 14px; margin-top: 20px; list-style: disc; padding-left: 20px;">
+            <li>E-Commerce, Professional Services, SaaS, Real Estate</li>
+            <li>Google UK rankings for high-intent keywords</li>
+          </ul>
+        </div>
+        <div class="market-panel"
+          style="background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1586724230021-4c3d39963a74?auto=format&fit=crop&q=80&w=600'); background-size: cover; background-position: center; border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; transition: transform 0.3s ease;">
+          <div class="flag" style="font-size: 40px; margin-bottom: 20px;">🇸🇦</div>
+          <h3 style="color: white; font-size: 24px; margin-bottom: 15px;">Saudi Arabia</h3>
+          <p style="color: var(--text-muted); line-height: 1.6; font-size: 15px;">Saudi Arabia is undergoing rapid
+            digital transformation. Vision 2030 is accelerating demand. Saudi consumers are digitally sophisticated,
+            mobile-first, and high-quality seekers.</p>
+          <ul
+            style="color: var(--text-muted); font-size: 14px; margin-top: 20px; list-style: disc; padding-left: 20px;">
+            <li>F&B, Real Estate, Retail, Healthcare</li>
+            <li>Google.com.sa rankings (Arabic & English)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="industries-list">
+        <div class="badge badge-blue">EXPERTISE</div>
+        <h3>Industries We Scale</h3>
+        <p style="color: var(--text-muted); text-align: center; margin-bottom: 30px;">We've delivered results across a
+          wide range of industries.</p>
+        <div class="industry-tags" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+          <span class="industry-tag"
+            style="background: rgba(255,255,255,0.05); padding: 8px 20px; border-radius: 100px; color: white; display: flex; align-items: center; gap: 8px;"><img
+              src="images/57_310.svg" style="width: 14px;" alt="check"> E-Commerce & Retail</span>
+          <span class="industry-tag"
+            style="background: rgba(255,255,255,0.05); padding: 8px 20px; border-radius: 100px; color: white; display: flex; align-items: center; gap: 8px;"><img
+              src="images/57_315.svg" style="width: 14px;" alt="check"> Food & Beverage</span>
+          <span class="industry-tag"
+            style="background: rgba(255,255,255,0.05); padding: 8px 20px; border-radius: 100px; color: white; display: flex; align-items: center; gap: 8px;"><img
+              src="images/57_320.svg" style="width: 14px;" alt="check"> Professional Services</span>
+          <span class="industry-tag"
+            style="background: rgba(255,255,255,0.05); padding: 8px 20px; border-radius: 100px; color: white; display: flex; align-items: center; gap: 8px;"><img
+              src="images/57_325.svg" style="width: 14px;" alt="check"> Healthcare & Wellness</span>
+          <span class="industry-tag"
+            style="background: rgba(255,255,255,0.05); padding: 8px 20px; border-radius: 100px; color: white; display: flex; align-items: center; gap: 8px;"><img
+              src="images/57_310.svg" style="width: 14px;" alt="check"> Real Estate & Property</span>
+          <span class="industry-tag"
+            style="background: rgba(255,255,255,0.05); padding: 8px 20px; border-radius: 100px; color: white; display: flex; align-items: center; gap: 8px;"><img
+              src="images/57_315.svg" style="width: 14px;" alt="check"> Education & Training</span>
+          <span class="industry-tag"
+            style="background: rgba(255,255,255,0.05); padding: 8px 20px; border-radius: 100px; color: white; display: flex; align-items: center; gap: 8px;"><img
+              src="images/57_320.svg" style="width: 14px;" alt="check"> Technology & SaaS</span>
+          <span class="industry-tag"
+            style="background: rgba(255,255,255,0.05); padding: 8px 20px; border-radius: 100px; color: white; display: flex; align-items: center; gap: 8px;"><img
+              src="images/57_325.svg" style="width: 14px;" alt="check"> Logistics & Supply Chain</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="founder-section">
+    <div class="container">
+      <div class="founder-content">
+        <div class="founder-image">
+          <div class="image-placeholder">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" alt="Founder Tariq H.">
+          </div>
+        </div>
+        <div class="founder-text">
+          <div class="badge badge-blue">ABOUT THE AGENCY</div>
+          <h2>Led by Someone Who Has Done the Work — Not Just Managed It</h2>
+          <p class="founder-quote">"I built SkyraSoft because I kept seeing the same problem: business owners working
+            with five different vendors, none of whom understood the full picture. We fix that — one team, complete
+            accountability, measurable results."</p>
+          <div class="founder-meta">
+            <strong>Tariq H.</strong>
+            <span>Founder & CEO, SkyraSoft</span>
+            <p style="font-size: 14px; color: var(--text-muted); margin-top: 10px;">Founded in July 2024, SkyraSoft has
+              grown into a 10-person team of specialists serving clients across the UK, Saudi Arabia, and Pakistan.</p>
+          </div>
+          <a href="#about" class="btn btn-primary" style="margin-top: 32px;">Read the Full SkyraSoft Story →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-title">
+        <div class="badge badge-blue">WHAT OUR CLIENTS SAY</div>
+        <h2>Don't Take Our Word for It</h2>
+      </div>
+
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <img src="images/57_372.svg" alt="quote">
+          </div>
+          <p class="testimonial-text">"Working with SkyraSoft was a completely different experience from any agency I'd
+            used before. They took time to understand our business first — and the results showed that. Our Shopify
+            store conversion rate tripled within 90 days."</p>
+          <div class="client-info">
+            <div class="client-avatar">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" alt="Sarah Jenkins">
+            </div>
+            <div>
+              <div class="client-name">Sarah Jenkins 🇬🇧</div>
+              <div class="client-role">CEO, LuxeRetail UK</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <img src="images/57_372.svg" alt="quote">
+          </div>
+          <p class="testimonial-text">"We were struggling to rank on Google in Saudi Arabia despite having a good
+            product. SkyraSoft completely rebuilt our SEO strategy, redesigned our site, and within 6 months we were
+            getting more organic enquiries than we could handle."</p>
+          <div class="client-info">
+            <div class="client-avatar">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150" alt="Hassan Malik">
+            </div>
+            <div>
+              <div class="client-name">Hassan Malik 🇸🇦</div>
+              <div class="client-role">Founder, DesertDine KSA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <img src="images/57_372.svg" alt="quote">
+          </div>
+          <p class="testimonial-text">"The level of communication and transparency we got from SkyraSoft was something
+            we'd never experienced with an agency. They told us exactly what they were doing and why — and it worked."
+          </p>
+          <div class="client-info">
+            <div class="client-avatar">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150" alt="Mark Thompson">
+            </div>
+            <div>
+              <div class="client-name">Mark Thompson</div>
+              <div class="client-role">Director, TechStream Services</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="insights-section" id="blog">
+    <div class="container">
+      <div class="section-header-row">
+        <div>
+          <div class="badge badge-blue">INSIGHTS & RESOURCES</div>
+          <h2>Knowledge for Growth</h2>
+          <p style="color: var(--text-muted); margin-top: 10px;">Practical Guides Written for Business Owners, Not
+            Developers</p>
+        </div>
+        <a href="#blog" class="view-all-link">View All Articles →</a>
+      </div>
+
+      <div class="grid insights-grid">
+        <div class="insight-card">
+          <div class="insight-image">
+            <img src="https://images.unsplash.com/photo-1560472355-536de3962603?auto=format&fit=crop&q=80&w=800" alt="SEO Insights">
+          </div>
+          <div class="insight-content">
+            <div class="tag">SEO | 8 min read</div>
+            <h3 style="color: white; font-size: 20px; line-height: 1.4; margin-bottom: 15px;">Why UK Businesses Are
+              Losing Customers to Competitors on Google</h3>
+            <p style="color: var(--text-muted); font-size: 14px;">Essential steps for UK businesses looking to enter the
+              burgeoning KSA market.</p>
+          </div>
+        </div>
+
+        <div class="insight-card">
+          <div class="insight-image">
+            <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&q=80&w=800" alt="Social Media Insights">
+          </div>
+          <div class="insight-content">
+            <div class="tag">Social Media | 6 min read</div>
+            <h3 style="color: white; font-size: 20px; line-height: 1.4; margin-bottom: 15px;">How Saudi Brands Are
+              Winning on Social Media in 2025</h3>
+            <p style="color: var(--text-muted); font-size: 14px;">How custom apps and themes are driving luxury retail
+              conversion rates.</p>
+          </div>
+        </div>
+
+        <div class="insight-card">
+          <div class="insight-image">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800" alt="E-Commerce Insights">
+          </div>
+          <div class="insight-content">
+            <div class="tag">E-Commerce | 10 min read</div>
+            <h3 style="color: white; font-size: 20px; line-height: 1.4; margin-bottom: 15px;">WooCommerce vs Shopify: An
+              Honest Comparison for UK Business Owners</h3>
+            <p style="color: var(--text-muted); font-size: 14px;">Why unifying your digital services leads to actual
+              business accountability.</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 50px;">
+        <a href="#blog" class="btn btn-secondary">Read All Articles →</a>
+      </div>
+    </div>
+  </section>
+  <section class="unique-hub-section">
+    <div class="container">
+      <div class="hub-container">
+        <div class="hub-content">
+          <div class="badge badge-blue">READY TO START?</div>
+          <h2>Your Business Deserves a Digital Presence That <span class="text-highlight">Works as Hard as You Do</span>
+          </h2>
+          <p>Whether you're a startup taking your first steps online, an established business that needs a complete
+            digital overhaul, or a growing brand ready to enter the UK or Saudi market — SkyraSoft is ready to build
+            what you need. The first consultation is free. The results are real.</p>
+          <div class="hub-cta-wrap">
+            <a href="#contact" class="btn btn-primary" style="padding: 15px 32px;">Book Your Free Consultation Today</a>
+            <a href="services.html" class="btn btn-secondary" style="padding: 15px 32px;">Explore All Services →</a>
+          </div>
+        </div>
+
+        <div class="hub-stats-grid">
+          <!-- Widget 1 -->
+          <div class="hub-widget">
+            <div class="location-tag">UK Hub</div>
+            <div class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
+            <h4>Compliant & Secure</h4>
+            <p>GDPR-ready solutions built with European standards of data privacy and security.</p>
+          </div>
+
+          <!-- Widget 2 -->
+          <div class="hub-widget">
+            <div class="location-tag">KSA Hub</div>
+            <div class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.71-2.13.09-3.05a3.91 3.91 0 0 0-3.09-1.45Z" />
+                <path d="M18 10c-3.3 0-6-2.7-6-6" />
+                <path d="M7 8a5 5 0 0 1 10 0 5 5 0 0 1-10 0Z" />
+                <path d="m15.5 15.5 3 3" />
+              </svg>
+            </div>
+            <h4>Vision 2030 Ready</h4>
+            <p>Digital transformation aligned with Saudi Arabia's ambitious growth and localization goals.</p>
+          </div>
+
+          <!-- Widget 3 -->
+          <div class="hub-widget">
+            <div class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                <path d="M2 12h20" />
+              </svg>
+            </div>
+            <h4>24/7 Connectivity</h4>
+            <p>Seamless communication bridging the gap between London and Riyadh time zones.</p>
+          </div>
+
+          <!-- Widget 4 -->
+          <div class="hub-widget">
+            <div class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+              </svg>
+            </div>
+            <h4>Premium Results</h4>
+            <p>Every single line of code is optimized for conversion, speed, and real business impact.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-text">Skyra<span class="text-blue">Soft</span></span>
+          </div>
+          <p>We Build. We Market. We Grow Your Business. The integrated growth partner for the UK and Saudi Arabia.</p>
+          <div class="social-links">
+            <a href="#"><img src="images/36_329.svg" alt="LinkedIn"></a>
+            <a href="#"><img src="images/36_332.svg" alt="Twitter"></a>
+            <a href="#"><img src="images/36_335.svg" alt="Instagram"></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Work</a></li>
+            <li><a href="#">Blog & Insights</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">SEO Optimization</a></li>
+            <li><a href="#">Social Media Marketing</a></li>
+            <li><a href="#">CRM/ERP Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <ul>
+            <li>
+              <img src="images/36_356.svg" alt="email">
+              <a href="mailto:hello@skyrasoft.com">hello@skyrasoft.com</a>
+            </li>
+            <li>
+              <img src="images/36_361.svg" alt="phone">
+              <a href="tel:+4401234567890">+44 (0) 123 456 7890</a>
+            </li>
+            <li>
+              <img src="images/36_366.svg" alt="location">
+              <span>Peshawar, Pakistan</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2024 SkyraSoft. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

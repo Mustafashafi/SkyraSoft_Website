@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordPress Development Agency UK & Saudi Arabia | Custom Themes, Plugins & WooCommerce | SkyraSoft</title>
+  <meta name="description"
+    content="Expert WordPress development for UK and Saudi businesses. Custom themes, plugin development, WooCommerce stores, and ongoing maintenance. 100% bespoke. Zero templates.">
+  <meta name="keywords"
+    content="WordPress developer UK, custom WordPress development London, WordPress agency Saudi Arabia, WooCommerce development UK, WordPress theme developer, custom WordPress website UK, WordPress plugin development, hire WordPress developer UK, WordPress website company KSA, bespoke WordPress site">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap');
+
+    :root {
+      /* Base Colors */
+      --bg-color: #030712;
+      --surface-dark: #0f172a;
+      --surface-light: rgba(255, 255, 255, 0.05);
+      --footer-bg: #02040a;
+
+      /* Typography */
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-primary: #f8fafc;
+      /* Alias */
+      --text-secondary: #94a3b8;
+      /* Alias */
+
+      /* Accents */
+      --accent-blue: #3b82f6;
+      --accent-blue-dark: #2563eb;
+      --accent-blue-light: #60a5fa;
+      --accent-blue-glow: rgba(59, 130, 246, 0.5);
+      --accent-blue-rgb: 59, 130, 246;
+      --accent-color: #3b82f6;
+      /* Alias */
+
+      --accent-purple: #8b5cf6;
+
+      /* Borders */
+      --border-glass: rgba(255, 255, 255, 0.08);
+      --border-color: rgba(255, 255, 255, 0.1);
+      /* Alias */
+
+      /* States */
+      --state-success: #10b981;
+      --state-error: #ef4444;
+      --success-color: #10b981;
+      /* Alias */
+      --danger-color: #ef4444;
+      /* Alias */
+
+      /* Extended Accents */
+      --accent-orange: #f59e0b;
+      --accent-pink: #ec4899;
+      --accent-cyan: #06b6d4;
+      --accent-yellow: #eab308;
+
+      /* Layout & Typography */
+      --container-width: 1200px;
+      --spacing-xl: 6rem;
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      /* Common Gradients */
+      --bg-deep: #0F1433;
+      --bg-deep-97: rgba(15, 20, 51, 0.97);
+      --bg-footer: #000000;
+      --gradient-accent: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+      --gradient-primary: linear-gradient(180deg, #030712 0%, #0f172a 100%);
+    }
+
+
+
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-deep-97);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Typography Classes */
+    .heading-xl {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      letter-spacing: -0.02em;
+    }
+
+    .heading-lg {
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.01em;
+    }
+
+    .heading-md {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .text-lead {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+    }
+
+    .text-small {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: rgba(var(--accent-blue-rgb), 0.1);
+      color: var(--accent-color);
+      border-radius: 100px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.875rem 1.75rem;
+      border-radius: 0.5rem;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+      gap: 0.5rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-blue-dark) 0%, var(--accent-blue) 100%);
+      color: white;
+      box-shadow: 0 4px 15px var(--accent-blue-glow), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transform: skewX(-20deg);
+      transition: 0.5s;
+    }
+
+    .btn-primary:hover::after {
+      left: 150%;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px var(--accent-blue-glow), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1.25rem 0;
+      z-index: 1000;
+      background: rgba(3, 7, 18, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    .logo span {
+      color: var(--accent-color);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-top: 120px;
+      background: var(--gradient-primary);
+      overflow: hidden;
+      padding-bottom: 20px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        radial-gradient(circle at 15% 50%, rgba(var(--accent-blue-rgb), 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 100px;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero h1 {
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, #fff, var(--text-muted));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      margin: 0 auto 2.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Stats Section */
+    .stats {
+      padding: 4rem 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .stat-item {
+      position: relative;
+    }
+
+    .stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 40px;
+      width: 1px;
+      background: var(--border-color);
+    }
+
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.5rem;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    /* Two Column Layout (Generic) */
+    .section-padding {
+      padding: var(--spacing-xl) 0;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    /* Problem/Solution Section specifically */
+    .problem-solution {
+      background: var(--bg-color);
+      position: relative;
+    }
+
+    .problem-box,
+    .solution-box {
+      padding: 3rem;
+      border-radius: 1.5rem;
+      height: 100%;
+    }
+
+    .problem-box {
+      background: rgba(239, 68, 68, 0.05);
+      border: 1px solid rgba(239, 68, 68, 0.1);
+    }
+
+    .solution-box {
+      background: rgba(16, 185, 129, 0.05);
+      border: 1px solid rgba(16, 185, 129, 0.1);
+    }
+
+    .problem-list,
+    .solution-list {
+      list-style: none;
+      margin-top: 2rem;
+    }
+
+    .problem-list li,
+    .solution-list li {
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .problem-list li i {
+      color: var(--danger-color);
+      margin-top: 0.25rem;
+    }
+
+    .solution-list li i {
+      color: var(--success-color);
+      margin-top: 0.25rem;
+    }
+
+    /* Grid Sections (Services, Why Us) */
+    .grid-4x2 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: rgba(30, 41, 59, 0.3);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 255, 255, 0.05);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-color);
+      border-top: 2px solid var(--accent-color);
+      border-left: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 1.25rem;
+      padding: 2.5rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.02);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.03), transparent);
+      transform: skewX(-25deg);
+      transition: 0.7s;
+    }
+
+    .card:hover::before {
+      left: 200%;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.05), 0 0 20px rgba(var(--accent-blue-rgb), 0.1);
+      border-color: rgba(var(--accent-blue-rgb), 0.3);
+      z-index: 10;
+    }
+
+    .card-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 0.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-color);
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), inset 0 2px 5px rgba(255, 255, 255, 0.05);
+    }
+
+    .card:hover .card-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-desc {
+      color: var(--text-secondary);
+      font-size: 0.9375rem;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .card-list {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-list li {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card-list li::before {
+      content: '→';
+      color: var(--accent-color);
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 0.875rem;
+      margin-top: auto;
+    }
+
+    .card-link:hover {
+      color: var(--accent-color);
+    }
+
+    /* Process Section */
+    .process-flow {
+      display: flex;
+      gap: 2rem;
+      margin-top: 4rem;
+      position: relative;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 1024px) {
+      .grid-4x2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .stat-item:nth-child(3)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .two-column {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .stat-item::after {
+        display: none !important;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .process-flow {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        display: none;
+        /* simple mobile hide for now */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .grid-4x2 {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .team-member-card,
+    .value-card,
+    .hover-3d {
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+    }
+
+    .team-member-card:hover,
+    .value-card:hover,
+    .hover-3d:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(var(--accent-blue-rgb), 0.2);
+      border-color: rgba(var(--accent-blue-rgb), 0.4) !important;
+      z-index: 10;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* WordPress Specific UI Styles */
+    .wp-hero-section {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 10% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 40%);
+    }
+
+    .wp-hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54 48c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm-28 0c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm-28 0c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm28-28c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm-28 0c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm56 0c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm-28-28c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm-28 0c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4zm56 0c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4-1.791-4-4-4z' fill='%233b82f6' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .wp-hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .wp-hero-visual-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .wp-hero-visual-container::after {
+      content: '';
+      position: absolute;
+      width: 140%;
+      height: 140%;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 60%);
+      z-index: -1;
+      animation: pulse-glow 8s infinite alternate;
+    }
+
+    @keyframes pulse-glow {
+      from {
+        transform: scale(0.85);
+        opacity: 0.4;
+      }
+
+      to {
+        transform: scale(1.1);
+        opacity: 0.7;
+      }
+    }
+
+    .wp-hero-img {
+      width: 100%;
+      max-width: 550px;
+      border-radius: 1.5rem;
+      filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.6));
+      animation: float-y 6s ease-in-out infinite;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    @keyframes float-y {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .floating-shape {
+      position: absolute;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      border-radius: 20px;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .shape-1 {
+      width: 120px;
+      height: 120px;
+      top: -10%;
+      right: 5%;
+      animation: float-rotate 15s infinite linear;
+    }
+
+    .shape-2 {
+      width: 80px;
+      height: 80px;
+      bottom: 10%;
+      left: -5%;
+      animation: float-rotate 20s infinite linear reverse;
+    }
+
+    @keyframes float-rotate {
+      from {
+        transform: rotate(0deg) translate(30px) rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg) translate(30px) rotate(-360deg);
+      }
+    }
+
+    .device-mockup-container {
+      position: relative;
+      padding: 2rem;
+      background: var(--gradient-glass);
+      border-radius: 2rem;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .device-mockup {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.5s ease;
+    }
+
+    .device-mockup-container:hover .device-mockup {
+      transform: scale(1.02);
+    }
+
+    .grid-sub-services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .sub-service-card {
+      background: var(--surface-light);
+      border: 1px solid var(--border-color);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .sub-service-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent-color);
+      background: rgba(255, 255, 255, 0.03);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+    }
+
+    .sub-service-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent-color);
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .sub-service-card:hover::after {
+      opacity: 1;
+    }
+
+    .sub-service-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      filter: drop-shadow(0 0 10px var(--accent-blue-glow));
+    }
+
+    .tech-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 3rem;
+      justify-content: center;
+    }
+
+    .tech-tag {
+      padding: 0.6rem 1.25rem;
+      background: var(--surface-dark);
+      border: 1px solid var(--border-color);
+      border-radius: 100px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .tech-tag:hover {
+      border-color: var(--accent-color);
+      color: var(--text-primary);
+      transform: translateY(-2px);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      position: relative;
+    }
+
+    .process-grid::before {
+      content: '';
+      position: absolute;
+      left: 32px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--border-color);
+      z-index: 0;
+    }
+
+    .process-step {
+      display: flex;
+      gap: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-number {
+      width: 64px;
+      height: 64px;
+      background: var(--bg-color);
+      border: 2px solid var(--accent-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--accent-color);
+      flex-shrink: 0;
+      box-shadow: 0 0 20px var(--accent-blue-glow);
+    }
+
+    .step-content {
+      background: var(--surface-light);
+      border: 1px solid var(--border-color);
+      padding: 2rem;
+      border-radius: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .is-right-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .is-right-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem;
+      background: rgba(255, vacuum, 255, 0.02);
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      transition: 0.3s;
+    }
+
+    .is-right-item:hover {
+      border-color: var(--accent-color);
+      background: rgba(var(--accent-blue-rgb), 0.05);
+      color: var(--text-primary);
+    }
+
+    .is-right-item i {
+      color: var(--accent-color);
+      font-size: 1.125rem;
+    }
+
+    .faq-accordion {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .faq-item {
+      background: var(--surface-light);
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .faq-header {
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+
+    .faq-body {
+      padding: 0 2rem 1.5rem;
+      color: var(--text-secondary);
+      display: none;
+    }
+
+    .faq-item.active .faq-body {
+      display: block;
+    }
+
+    .faq-item.active {
+      border-color: var(--accent-color);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .footer-link {
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .footer-link:hover {
+      color: var(--accent-color);
+      transform: translateX(5px);
+    }
+
+    .social-group {
+      display: flex;
+      gap: 1.25rem;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      transition: 0.3s;
+      border: 1px solid var(--border-color);
+    }
+
+    .social-icon:hover {
+      background: var(--accent-color);
+      color: white;
+      transform: translateY(-3px);
+      border-color: var(--accent-color);
+    }
+
+    @media (max-width: 991px) {
+
+      .grid-sub-services,
+      .is-right-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .wp-hero-visual {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">Skyra<span>Soft</span></div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a href="quote.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Get a
+        Quote</a>
+    </div>
+  </header>
+
+  <!-- 【 SECTION: PAGE HERO 】 -->
+  <section class="wp-hero-section">
+    <div class="container">
+      <div class="wp-hero-grid">
+        <!-- Left Content -->
+        <div class="hero-content" style="text-align: left; margin: 0; position: relative; z-index: 2;">
+          <nav
+            style="margin-bottom: 2rem; display: flex; gap: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+            <a href="index.html" style="color: var(--accent-color);">Home</a> <span>></span>
+            <a href="services.html" style="color: var(--accent-color);">Services</a> <span>></span>
+            <span style="color: var(--text-primary);">WordPress Development</span>
+          </nav>
+          <span class="tag">WordPress Development</span>
+          <h1 class="heading-xl" style="line-height: 1.1; margin-bottom: 2rem;">
+            Custom WordPress Websites & WooCommerce Stores Built to Perform
+          </h1>
+          <p class="text-lead" style="margin-bottom: 3rem; max-width: 600px; opacity: 0.9;">
+            Fast. Secure. Custom-coded. Built specifically for your business and your audience — whether that's in the
+            UK, Saudi Arabia, or anywhere in between.
+          </p>
+          <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-primary" style="font-size: 1.125rem; padding: 1.25rem 3rem;">
+              Get a Free WordPress Consultation <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <br><br>
+        </div>
+
+        <!-- Right Visual -->
+        <div class="wp-hero-visual-container">
+          <div class="floating-shape shape-1"></div>
+          <div class="floating-shape shape-2"></div>
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200"
+            alt="WordPress Development Visual" class="wp-hero-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 【 SECTION: INTRO — 2 Column 】 -->
+  <section class="section-padding"
+    style="background: var(--bg-deep); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="two-column">
+        <div style="order: 2;">
+          <div class="device-mockup-container">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+              alt="Custom WordPress Site Mockup" class="device-mockup">
+          </div>
+        </div>
+        <div style="order: 1;">
+          <span class="tag">Why Custom WordPress?</span>
+          <h2 class="heading-lg" style="margin-bottom: 1.5rem;">Most WordPress Websites Underperform. Here's Why Yours
+            Won't.</h2>
+          <p class="text-secondary" style="margin-bottom: 1.5rem;">
+            WordPress powers 43% of the internet — which means most WordPress websites look and function exactly like
+            each other. A theme downloaded from ThemeForest, a page builder doing all the heavy lifting, and a site so
+            loaded with unnecessary code that it takes 6 seconds to load on mobile. That is not a business asset. That
+            is a digital liability.
+          </p>
+          <p class="text-secondary" style="margin-bottom: 1.5rem;">
+            We build WordPress differently. Every website we create starts with a blank canvas and ends with a
+            custom-coded, precisely engineered solution that is tailored to your business, your brand, and your
+            audience. No excess code. No unnecessary plugins. No compromises on speed, security, or functionality.
+          </p>
+          <p class="text-secondary">
+            For businesses in the UK, where Google's Core Web Vitals scores directly impact rankings, and for Saudi
+            businesses where mobile-first browsing dominates — the difference between a templated WordPress site and a
+            custom-built one is the difference between a business tool and an embarrassment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 【 SECTION: WHAT WE BUILD — 6 Sub-Service Cards 】 -->
+  <section class="section-padding" style="background: var(--bg-deep-97);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <span class="tag">What We Deliver</span>
+        <h2 class="heading-lg">Our WordPress Development Services — Fully Covered</h2>
+      </div>
+
+      <div class="grid-sub-services">
+        <!-- 1. Custom Theme -->
+        <div class="sub-service-card">
+          <div class="sub-service-icon"><i class="fa-solid fa-code"></i></div>
+          <h3 class="heading-md">1. Custom WordPress Theme Development</h3>
+          <p class="text-secondary">Every visual element, every interaction, every layout decision — built from scratch
+            in code. We don't buy themes, we don't edit existing ones, and we don't use drag-and-drop builders as the
+            foundation of professional work. Your theme is written specifically for your brand and your requirements.
+          </p>
+          <div class="tech-tags" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">PHP</span>
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">SCSS</span>
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">JS</span>
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">Gutenberg</span>
+          </div>
+        </div>
+
+        <!-- 2. Custom Plugins -->
+        <div class="sub-service-card">
+          <div class="sub-service-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+          <h3 class="heading-md">2. Custom WordPress Plugin Development</h3>
+          <p class="text-secondary">When you need functionality that no existing plugin can deliver cleanly — we build
+            it. Custom WordPress plugins built specifically for your business logic: custom post types, advanced
+            filtering systems, booking engines, membership portals, integrations with your CRM or ERP, bespoke checkout
+            flows.</p>
+          <div class="tech-tags" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">PHP OOP</span>
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">REST API</span>
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">MySQL</span>
+          </div>
+        </div>
+
+        <!-- 3. WooCommerce -->
+        <div class="sub-service-card">
+          <div class="sub-service-icon"><i class="fa-brands fa-shopify"></i></div>
+          <!-- Use shopify as a placeholder or another icon if needed, though they asked for woo icon -->
+          <h3 class="heading-md">3. WooCommerce Store Development</h3>
+          <p class="text-secondary">WooCommerce is the most powerful e-commerce solution on WordPress — and when built
+            correctly, it can handle everything from a 20-product boutique to a 20,000-SKU catalogue with complex
+            pricing rules, subscription products, and advanced checkout flows.</p>
+          <div class="tech-tags" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">WooCommerce</span>
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">Stripe</span>
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">REST API</span>
+          </div>
+        </div>
+
+        <!-- 4. Redesign & Migration -->
+        <div class="sub-service-card">
+          <div class="sub-service-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+          <h3 class="heading-md">4. WordPress Redesign & Migration</h3>
+          <p class="text-secondary">If you're stuck with an outdated site that no longer reflects your brand — we
+            rebuild it. Migrations from Wix, Squarespace, Magento, or other systems handled with zero data loss, full
+            SEO preservation, and minimal operational disruption.</p>
+          <div class="tech-tags" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">SEO Migration</span>
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">Data Integrity</span>
+          </div>
+        </div>
+
+        <!-- 5. Performance -->
+        <div class="sub-service-card">
+          <div class="sub-service-icon"><i class="fa-solid fa-gauge-high"></i></div>
+          <h3 class="heading-md">5. Performance Optimisation & Core Web Vitals</h3>
+          <p class="text-secondary">A slow website is an invisible website. We audit your existing WordPress site — or
+            build from the ground up with performance as a primary goal — and deliver measurable improvements in load
+            time, Lighthouse scores, and Core Web Vitals.</p>
+          <div class="tech-tags" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">GTmetrix</span>
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">Redis</span>
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">CDN</span>
+          </div>
+        </div>
+
+        <!-- 6. Maintenance -->
+        <div class="sub-service-card">
+          <div class="sub-service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="heading-md">6. WordPress Maintenance, Security & Support</h3>
+          <p class="text-secondary">A WordPress website is not a set-and-forget asset. Core updates, security
+            monitoring, backup management, and proactive threat response — all of this requires ongoing attention
+            through our dedicated maintenance retainers.</p>
+          <div class="tech-tags" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">Security</span>
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">Backups</span>
+            <span class="tag" style="font-size: 0.7rem; margin-bottom: 0;">Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 【 SECTION: TECHNOLOGY STACK — Icons/Tags Row 】 -->
+  <section class="section-padding"
+    style="background: var(--bg-deep); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <span class="tag">Technologies We Use</span>
+        <h2 class="heading-lg">Built on Proven Technology, Implemented With Precision</h2>
+      </div>
+
+      <div class="tech-tag-row">
+        <div class="tech-tag"><i class="fa-brands fa-wordpress"></i> WordPress CMS</div>
+        <div class="tech-tag"><i class="fa-solid fa-cart-shopping"></i> WooCommerce</div>
+        <div class="tech-tag"><i class="fa-brands fa-php"></i> PHP 8.2+</div>
+        <div class="tech-tag"><i class="fa-brands fa-js"></i> JavaScript (ES6+)</div>
+        <div class="tech-tag"><i class="fa-brands fa-react"></i> React (Headless)</div>
+        <div class="tech-tag"><i class="fa-solid fa-database"></i> MySQL</div>
+        <div class="tech-tag"><i class="fa-solid fa-cloud"></i> Cloudflare</div>
+        <div class="tech-tag"><i class="fa-solid fa-bolt"></i> Redis</div>
+        <div class="tech-tag"><i class="fa-brands fa-docker"></i> Docker</div>
+        <div class="tech-tag"><i class="fa-brands fa-git-alt"></i> Git</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 【SECTION 5 — PROCESS【‘ -->
+  <!-- 【 SECTION: OUR PROCESS — 5 Steps Detailed 】 -->
+  <section class="section-padding" style="background: var(--bg-deep-97);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <span class="tag">Our Process</span>
+        <h2 class="heading-lg">How We Deliver WordPress Projects — Step by Step</h2>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3 class="heading-md" style="margin-bottom: 1rem;">STEP 1 — DISCOVERY & STRATEGY (Week 1)</h3>
+            <p class="text-secondary">We spend time understanding your business model, your audience, your competitors,
+              and your technical requirements. We audit your existing site if applicable and identify what's working,
+              what isn't, and what needs to be built. The output is a clear project brief that everyone on our team
+              works from.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3 class="heading-md" style="margin-bottom: 1rem;">STEP 2 — ARCHITECTURE & UI/UX DESIGN (Weeks 1–2)</h3>
+            <p class="text-secondary">Before any code is written, we plan the information architecture — how the site is
+              structured, how users navigate it, and what the conversion paths are. We then design the user interface in
+              Figma, showing you exactly how every page will look on desktop and mobile before development begins.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3 class="heading-md" style="margin-bottom: 1rem;">STEP 3 — CUSTOM DEVELOPMENT (Weeks 2–5+)</h3>
+            <p class="text-secondary">Our WordPress developer builds the custom theme and any required functionality
+              from scratch. We work in a staged development environment, run regular code reviews, and keep you updated
+              at defined milestones. No surprises.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3 class="heading-md" style="margin-bottom: 1rem;">STEP 4 — CONTENT INTEGRATION, TESTING & QA (Weeks 5–6)
+            </h3>
+            <p class="text-secondary">We integrate all content, run comprehensive cross-browser and cross-device
+              testing, conduct a full performance audit, run a security review, and fix any issues identified. Nothing
+              goes live until every element has been thoroughly tested.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-number">05</div>
+          <div class="step-content">
+            <h3 class="heading-md" style="margin-bottom: 1rem;">STEP 5 — LAUNCH, TRAINING & POST-LAUNCH SUPPORT</h3>
+            <p class="text-secondary">We manage the launch, monitor the site closely in the days following go-live, and
+              provide a handover session where we train you to manage content confidently. Post-launch support is
+              available, and we'll handle any issues that arise immediately after launch at no extra charge.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 【 SECTION: WHO THIS IS FOR — Audience Matching 】 -->
+  <section class="section-padding"
+    style="background: var(--bg-deep); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 4rem;">
+        <span class="tag">Is This Right For You?</span>
+        <h2 class="heading-lg">Who Our WordPress Development Service Is Built For</h2>
+      </div>
+
+      <div class="is-right-grid">
+        <div class="is-right-item"><i class="fa-solid fa-check-circle"></i> UK businesses needing a professional website
+          that generates enquiries, not just exists online.</div>
+        <div class="is-right-item"><i class="fa-solid fa-check-circle"></i> Saudi Arabian businesses requiring bilingual
+          (Arabic/English) WordPress sites.</div>
+        <div class="is-right-item"><i class="fa-solid fa-check-circle"></i> E-commerce brands needing a WooCommerce
+          store with advanced requirements.</div>
+        <div class="is-right-item"><i class="fa-solid fa-check-circle"></i> Startups launching their first digital
+          presence and wanting it done right from the start.</div>
+        <div class="is-right-item"><i class="fa-solid fa-check-circle"></i> Established businesses with outdated sites
+          underperforming technically and commercially.</div>
+        <div class="is-right-item"><i class="fa-solid fa-check-circle"></i> Agencies needing a white-label WordPress
+          development partner for their own clients.</div>
+        <div class="is-right-item"><i class="fa-solid fa-check-circle"></i> Businesses migrating away from Wix,
+          Squarespace, or other limiting platforms.</div>
+        <div class="is-right-item"><i class="fa-solid fa-check-circle"></i> Publishers, news sites, or content-heavy
+          businesses needing a scalable CMS solution.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 【 SECTION: FAQ — WordPress Development 】 -->
+  <section class="section-padding" style="background: var(--bg-deep-97);">
+    <div class="container" style="max-width: 900px;">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <span class="tag">FAQ</span>
+        <h2 class="heading-lg">WordPress Questions We Get Asked Most</h2>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-header">How long does a custom WordPress website take to build? <i
+              class="fa-solid fa-plus"></i></div>
+          <div class="faq-body">The timeline depends on the complexity and scale of the project. A professional business
+            website typically takes 3 to 6 weeks. A complex WooCommerce store or a feature-heavy platform can take 8 to
+            16 weeks. We provide a specific timeline in every proposal.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">What is the difference between a custom WordPress theme and a premium template? <i
+              class="fa-solid fa-plus"></i></div>
+          <div class="faq-body">A premium template is a design someone else built, carrying code you don't need, and
+            impossible to truly make your own. A custom theme is built specifically for your brand from scratch — clean
+            code, only the functionality you need. The performance difference is significant.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">Can you migrate my existing website to WordPress? <i class="fa-solid fa-plus"></i>
+          </div>
+          <div class="faq-body">Yes — we handle migrations from Wix, Squarespace, Magento, and other systems. We
+            preserve all your content, maintain your URL structure to protect existing SEO rankings, and test thoroughly
+            before and after the migration.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">Do you build WordPress websites for businesses in Saudi Arabia? <i
+              class="fa-solid fa-plus"></i></div>
+          <div class="faq-body">Yes. We build bilingual (Arabic/English) WordPress websites including RTL support,
+            Arabic typography, Saudi payment gateway integration, and local SEO considerations for Google Saudi Arabia.
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">Will my WordPress site be mobile-friendly and SEO-optimised? <i
+              class="fa-solid fa-plus"></i></div>
+          <div class="faq-body">Every WordPress site we build is mobile-first responsive and built with technical SEO
+            best practices embedded from the ground up — clean code, structured data, and optimised page speeds.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-header">What happens after my site goes live — do you offer support? <i
+              class="fa-solid fa-plus"></i></div>
+          <div class="faq-body">Yes. We offer ongoing maintenance retainers that cover core and plugin updates, security
+            monitoring, backups, and technical support. You're also welcome to manage the site independently.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 【 SECTION: RELATED SERVICES 】 -->
+  <section class="section-padding" style="background: var(--bg-deep); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <span class="tag">You Might Also Need</span>
+        <h2 class="heading-md">Related Services to Boost Your Growth</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <a href="seo.html" class="sub-service-card" style="padding: 2rem;">
+          <i class="fa-solid fa-ranking-star" style="font-size: 2rem; color: var(--accent-color);"></i>
+          <h4 class="heading-sm">SEO Services</h4>
+          <p class="text-small">Make sure your new WordPress site gets found by the right people in Google UK and KSA.
+          </p>
+        </a>
+        <a href="design.html" class="sub-service-card" style="padding: 2rem;">
+          <i class="fa-solid fa-bezier-curve" style="font-size: 2rem; color: var(--accent-color);"></i>
+          <h4 class="heading-sm">Graphic Design</h4>
+          <p class="text-small">Ensure your brand identity and visual assets are as strong as your website.</p>
+        </a>
+        <a href="social-media.html" class="sub-service-card" style="padding: 2rem;">
+          <i class="fa-solid fa-share-nodes" style="font-size: 2rem; color: var(--accent-color);"></i>
+          <h4 class="heading-sm">Social Media Marketing</h4>
+          <p class="text-small">Drive traffic to your new website through targeted social and paid campaigns.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 【 SECTION: FINAL CTA 】 -->
+  <section class="section-padding"
+    style="background: var(--bg-deep-97); border-top: 1px solid var(--border-color); position: relative; overflow: hidden;">
+    <div
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, transparent 70%); pointer-events: none;">
+    </div>
+    <div class="container" style="text-align: center; position: relative; z-index: 1;">
+      <span class="tag">Ready to Build?</span>
+      <h2 class="heading-lg" style="margin-bottom: 1.5rem;">Let's Build a WordPress Website Your Business Can Be Proud
+        Of</h2>
+      <p class="text-secondary" style="max-width: 800px; margin: 0 auto 2.5rem; font-size: 1.125rem;">
+        Tell us about your project — what you need, what you've tried before, and what you want to achieve. We'll come
+        back with a clear plan, an honest timeline, and a proposal built around your specific situation.
+      </p>
+      <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-primary" style="font-size: 1.125rem; padding: 1.25rem 3.5rem;">
+          Get Your Free Consultation Today
+        </a>
+        <a href="portfolio.html" class="btn btn-secondary" style="font-size: 1.125rem; padding: 1.25rem 3.5rem;">
+          View Our Work
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer"
+    style="background: var(--bg-footer); padding: 5rem 0 2rem; border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 4rem;">
+        <!-- Column 1: Brand -->
+        <div style="grid-column: span 2;">
+          <div class="logo" style="margin-bottom: 1.5rem; font-size: 1.75rem;">Skyra<span>Soft</span></div>
+          <p class="text-secondary" style="margin-bottom: 2rem; max-width: 350px;">
+            We don't just build websites; we engineer digital growth. Partner with the agency that executes with
+            technical precision and native market understanding.
+          </p>
+          <div class="social-group">
+            <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Services -->
+        <div>
+          <h4 style="margin-bottom: 2rem; color: white; font-size: 1.125rem;">Our Services</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+            <li><a href="wordpress.html" class="footer-link text-secondary">WordPress Development</a></li>
+            <li><a href="shopify.html" class="footer-link text-secondary">Shopify Commerce</a></li>
+            <li><a href="seo.html" class="footer-link text-secondary">SEO & Growth</a></li>
+            <li><a href="social-media.html" class="footer-link text-secondary">Social Strategy</a></li>
+            <li><a href="web-apps.html" class="footer-link text-secondary">Custom Web Apps</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div>
+          <h4 style="margin-bottom: 2rem; color: white; font-size: 1.125rem;">Company</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+            <li><a href="about.html" class="footer-link text-secondary">About Our Team</a></li>
+            <li><a href="portfolio.html" class="footer-link text-secondary">Success Stories</a></li>
+            <li><a href="blog.html" class="footer-link text-secondary">Insights & News</a></li>
+            <li><a href="contact.html" class="footer-link text-secondary">Start a Project</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Location -->
+        <div>
+          <h4 style="margin-bottom: 2rem; color: white; font-size: 1.125rem;">Global Offices</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.5rem;">
+            <li>
+              <div style="color: white; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">United Kingdom
+              </div>
+              <div class="text-secondary" style="font-size: 0.875rem;">Serving Clients Nationwide & London</div>
+            </li>
+            <li>
+              <div style="color: white; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Saudi Arabia</div>
+              <div class="text-secondary" style="font-size: 0.875rem;">Riyadh, Jeddah & Eastern Province</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        style="border-top: 1px solid var(--border-color); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+        <p class="text-small" style="color: var(--text-secondary);">&copy; 2024 SkyraSoft. Fully Bespoke Engineering.
+          All rights reserved.</p>
+        <div style="display: flex; gap: 2rem;">
+          <a href="privacy.html" class="text-small hover-primary" style="color: var(--text-secondary);">Privacy
+            Policy</a>
+          <a href="terms.html" class="text-small hover-primary" style="color: var(--text-secondary);">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        item.classList.toggle('active');
+        const icon = header.querySelector('i');
+        if (icon) {
+          icon.classList.toggle('fa-plus');
+          icon.classList.toggle('fa-minus');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

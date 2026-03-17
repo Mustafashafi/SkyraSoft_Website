@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Marketing | SkyraSoft</title>
+    <meta name="description"
+        content="Social media marketing that builds real brand presence, not just vanity metrics. For UK and Saudi brands.">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap');
+
+        :root {
+      /* Base Colors */
+      --bg-color: #030712;
+      --surface-dark: #0f172a;
+      --surface-light: rgba(255, 255, 255, 0.05);
+      --footer-bg: #02040a;
+      
+      /* Typography */
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-primary: #f8fafc; /* Alias */
+      --text-secondary: #94a3b8; /* Alias */
+      
+      /* Accents */
+      --accent-blue: #3b82f6;
+      --accent-blue-dark: #2563eb;
+      --accent-blue-light: #60a5fa;
+      --accent-blue-glow: rgba(59, 130, 246, 0.5);
+      --accent-blue-rgb: 59, 130, 246;
+      --accent-color: #3b82f6; /* Alias */
+      
+      --accent-purple: #8b5cf6;
+      
+      /* Borders */
+      --border-glass: rgba(255, 255, 255, 0.08);
+      --border-color: rgba(255, 255, 255, 0.1); /* Alias */
+      
+      /* States */
+      --state-success: #10b981;
+      --state-error: #ef4444;
+      --success-color: #10b981; /* Alias */
+      --danger-color: #ef4444;  /* Alias */
+      
+      /* Extended Accents */
+      --accent-orange: #f59e0b;
+      --accent-pink: #ec4899;
+      --accent-cyan: #06b6d4;
+      --accent-yellow: #eab308;
+      
+      /* Layout & Typography */
+      --container-width: 1200px;
+      --spacing-xl: 6rem;
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      
+      /* Common Gradients */
+      --gradient-accent: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+      --gradient-primary: linear-gradient(180deg, #030712 0%, #0f172a 100%);
+    }
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Typography Classes */
+.heading-xl {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  letter-spacing: -0.02em;
+}
+
+.heading-lg {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.01em;
+}
+
+.heading-md {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.text-lead {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+.text-small {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(var(--accent-blue-rgb), 0.1);
+  color: var(--accent-color);
+  border-radius: 100px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-blue-dark) 0%, var(--accent-blue) 100%);
+  color: white;
+  box-shadow: 0 4px 15px var(--accent-blue-glow), inset 0 1px 1px rgba(255,255,255,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 50%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.btn-primary:hover::after {
+  left: 150%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--accent-blue-glow), inset 0 1px 1px rgba(255,255,255,0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  padding: 1.25rem 0;
+  z-index: 1000;
+  background: rgba(3, 7, 18, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo { font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.logo span {
+  color: var(--accent-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.nav-links a:hover { color: var(--text-primary);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 120px;
+  background: var(--gradient-primary);
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(var(--accent-blue-rgb), 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.hero h1 {
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #fff, var(--text-muted));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin: 0 auto 2.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Stats Section */
+.stats {
+  padding: 4rem 0;
+  background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-item {
+  position: relative;
+}
+
+.stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 1px;
+  background: var(--border-color);
+}
+
+.stat-number { font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Two Column Layout (Generic) */
+.section-padding {
+  padding: var(--spacing-xl) 0;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Problem/Solution Section specifically */
+.problem-solution {
+  background: var(--bg-color);
+  position: relative;
+}
+
+.problem-box,
+.solution-box {
+  padding: 3rem;
+  border-radius: 1.5rem;
+  height: 100%;
+}
+
+.problem-box {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.1);
+}
+
+.solution-box {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.1);
+}
+
+.problem-list,
+.solution-list {
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.problem-list li,
+.solution-list li {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.problem-list li i {
+  color: var(--danger-color);
+  margin-top: 0.25rem;
+}
+
+.solution-list li i {
+  color: var(--success-color);
+  margin-top: 0.25rem;
+}
+
+/* Grid Sections (Services, Why Us) */
+.grid-4x2 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.card {
+  background: rgba(30, 41, 59, 0.3); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 15px rgba(255,255,255,0.05); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+  border-top: 2px solid var(--accent-color);
+  border-left: 1px solid rgba(255,255,255,0.15);
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5), inset 0 0 20px rgba(255,255,255,0.02);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.03), transparent);
+  transform: skewX(-25deg);
+  transition: 0.7s;
+}
+
+.card:hover::before {
+  left: 200%;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6), inset 0 0 20px rgba(255,255,255,0.05), 0 0 20px rgba(var(--accent-blue-rgb), 0.1);
+  border-color: rgba(var(--accent-blue-rgb), 0.3);
+  z-index: 10;
+}
+
+.card-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 0.5rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3), inset 0 2px 5px rgba(255,255,255,0.05);
+}
+
+.card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.card-desc {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.card-list li {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-list li::before {
+  content: '→';
+  color: var(--accent-color);
+}
+
+.card-link { display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-top: auto;
+}
+
+.card-link:hover {
+  color: var(--accent-color);
+}
+
+/* Process Section */
+.process-flow {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+  position: relative;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .grid-4x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stat-item:nth-child(3)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stat-item::after {
+    display: none !important;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .process-flow {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    display: none;
+    /* simple mobile hide for now */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-4x2 {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.team-member-card, .value-card, .hover-3d {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s;
+}
+.team-member-card:hover, .value-card:hover, .hover-3d:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 20px rgba(var(--accent-blue-rgb), 0.2);
+  border-color: rgba(var(--accent-blue-rgb), 0.4) !important;
+  z-index: 10;
+}
+
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">Skyra<span>Soft</span></div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        
+        <a href="quote.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Get a Quote</a>
+      </div>
+        </div>
+    </header>
+
+    <section class="hero" style="min-height: 50vh; align-items: center; padding-top: 100px;">
+        <div class="container text-center">
+            <div class="hero-content" style="max-width: 800px; margin: 0 auto;">
+                <span class="tag" style="background: rgba(139, 92, 246, 0.1); color: var(--accent-purple);"><i
+                        class="fa-solid fa-hashtag"></i> Service</span>
+                <h1 class="heading-xl">Social Media Marketing</h1>
+                <p class="text-lead" style="margin: 0 auto 2rem;">We build real brand presence that directly influences
+                    your bottom line, not just empty vanity likes.</p>
+                <a href="quote.html" class="btn btn-primary" style="font-size: 1.125rem;">Grow Your Social Presence <i
+                        class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 10px 40px rgba(0,0,0,0.4);">
+        <div class="container">
+            <div class="grid-4x2" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="card">
+                    <h3 class="card-title">Data-Backed Strategy</h3>
+                    <p class="text-secondary">Extensive competitor auditing to find content gaps and formulate monthly
+                        calendars.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Content Creation</h3>
+                    <p class="text-secondary">Producing viral-format reels, highly engaging carousels, and striking
+                        brand visual assets.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Paid Social Ads</h3>
+                    <p class="text-secondary">Scaling Meta and TikTok ad budgets efficiently using strict ROAS (Return
+                        on Ad Spend) models.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Community Management</h3>
+                    <p class="text-secondary">Directly engaging with your audience daily to build unparalleled brand
+                        loyalty and trust.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--bg-color);">
+        <div class="container">
+            <div class="two-column">
+                <div>
+                    <h2 class="heading-lg" style="margin-bottom: 2rem;">Platforms We Master</h2>
+                    <div
+                        style="display: flex; gap: 1rem; font-size: 2.5rem; color: var(--text-secondary); margin-bottom: 2rem; flex-wrap: wrap;">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-snapchat"></i>
+                    </div>
+                    <h2 class="heading-md" style="margin-bottom: 1rem;">UK vs Saudi Approach</h2>
+                    <p class="text-secondary">We understand that British consumers engage entirely differently than
+                        audiences in Riyadh. In the KSA, Snapchat dominance requires culturally precise vertical video.
+                        In the UK, B2B pipeline heavily relies on LinkedIn thought-leadership carousels.</p>
+                </div>
+
+                <div
+                    style="background: rgba(30, 41, 59, 0.3); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 10px 30px rgba(0,0,0,0.5), inset 0 0 15px rgba(255,255,255,0.05); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); padding: 3rem; border-radius: 1rem; border: 1px solid var(--border-color);">
+                    <h2 class="heading-md" style="margin-bottom: 1.5rem;">Our Core Process</h2>
+                    <ul class="card-list" style="margin-top: 1.5rem;">
+                        <li><strong>Audit:</strong> We analyse past failures and competitor successes.</li>
+                        <li><strong>Strategy:</strong> Establishing brand voice, pillars, and KPIs.</li>
+                        <li><strong>Content Calendar:</strong> 30 days of approved assets in advance.</li>
+                        <li><strong>Post & Engage:</strong> Proactive community management.</li>
+                        <li><strong>Report:</strong> Clear attribution data on traffic generated.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+</body>
+
+</html>
